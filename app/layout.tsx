@@ -10,8 +10,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Think UX — Case Studies",
-  description: "Think UX brand case studies",
+  title: "Think UX",
+  description:
+    "Think UX is a design and branding agency crafting visual identities, campaigns, and digital experiences for brands across India.",
+  openGraph: {
+    title: "Think UX",
+    description:
+      "Design and branding agency crafting visual identities, campaigns, and digital experiences.",
+    images: [{ url: "/og-image.png", width: 108, height: 120 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Think UX",
+    description: "Design and branding agency — visual identities, campaigns, digital experiences.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
