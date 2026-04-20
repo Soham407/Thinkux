@@ -48,17 +48,17 @@ export default function KeucoCaseStudyPage() {
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           <ImageTile
-            file="Advt 3 1.jpg"
+            file="Advt 3 1.avif"
             index={0}
             className="aspect-[454/606] bg-[#f2eee7]"
           />
           <ImageTile
-            file="Advt 4 1.jpg"
+            file="Advt 4 1.avif"
             index={1}
             className="aspect-[454/606] bg-[#08151d]"
           />
           <ImageTile
-            file="Advt 5 1.jpg"
+            file="Advt 5 1.avif"
             index={2}
             className="aspect-[454/606] bg-[#f0ede7]"
           />
@@ -66,17 +66,17 @@ export default function KeucoCaseStudyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1.78fr_0.9fr_0.9fr] gap-4 md:gap-5 items-start">
           <ImageTile
-            file="2 3.jpg"
+            file="2 3.avif"
             index={3}
             className="aspect-[683/470] bg-[#4a3d31]"
           />
           <ImageTile
-            file="Asset 1@2x 6.jpg"
+            file="Asset 1@2x 6.avif"
             index={4}
             className="aspect-[454/606] bg-[#e7d79a]"
           />
           <ImageTile
-            file="Asset 3@2x 6.jpg"
+            file="Asset 3@2x 6.avif"
             index={5}
             className="aspect-[454/606] bg-[#0d0718]"
           />
@@ -84,13 +84,13 @@ export default function KeucoCaseStudyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 md:gap-5">
           <ImageTile
-            file="Group.jpg"
+            file="Group.avif"
             index={6}
             className="aspect-[699/424] bg-[#d7d4d0]"
             sizes="(min-width: 768px) 48vw, 100vw"
           />
           <ImageTile
-            file="Asset 2@2x 6.jpg"
+            file="Asset 2@2x 6.avif"
             index={7}
             className="aspect-[699/424] bg-[#170d1f]"
             sizes="(min-width: 768px) 48vw, 100vw"

@@ -144,7 +144,7 @@ export const keucoMain: MainPageBrand = {
     },
   ],
   assetFolder: "KEUCO",
-  images: ["Faucet advt ctc1-01 1.jpg", "Advt 2 1.jpg", "Advt 1 1.jpg"],
+  images: ["Faucet advt ctc1-01 1.avif", "Advt 2 1.avif", "Advt 1 1.avif"],
 };
 
 export const hansgroheMain: MainPageBrand = {
@@ -166,5 +166,5 @@ export const hansgroheMain: MainPageBrand = {
     },
   ],
   assetFolder: "Hansgrohe",
-  images: ["Group 472578.jpg", "Asset 5@2x 5.jpg"],
+  images: ["Group 472578.avif", "Asset 5@2x 5.avif"],
 };

@@ -48,13 +48,13 @@ export default function HansgroheCaseStudyPage() {
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-[0.92fr_1.5fr] gap-4 md:gap-5 items-stretch">
           <ImageTile
-            file="Axor advt_HALFPAGE 1.jpg"
+            file="Axor advt_HALFPAGE 1.avif"
             index={0}
             className="aspect-[562/402] bg-[#080808]"
             sizes="(min-width: 768px) 32vw, 100vw"
           />
           <ImageTile
-            file="Axor_Branding_CC 1.jpg"
+            file="Axor_Branding_CC 1.avif"
             index={1}
             className="aspect-[865/402] bg-[#080808]"
             sizes="(min-width: 768px) 58vw, 100vw"
@@ -63,17 +63,17 @@ export default function HansgroheCaseStudyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
           <ImageTile
-            file="ADVERTORIAL 2.jpg"
+            file="ADVERTORIAL 2.avif"
             index={2}
             className="aspect-[462/664] bg-white"
           />
           <ImageTile
-            file="PowderRain leaflet A5 back 1.jpg"
+            file="PowderRain leaflet A5 back 1.avif"
             index={3}
             className="aspect-[462/664] bg-white"
           />
           <ImageTile
-            file="ADVERTORIAL 1 1.jpg"
+            file="ADVERTORIAL 1 1.avif"
             index={4}
             className="aspect-[462/664] bg-white"
           />
@@ -82,19 +82,19 @@ export default function HansgroheCaseStudyPage() {
         <div className="grid grid-cols-1 md:grid-cols-[0.82fr_0.9fr_0.9fr] gap-4 md:gap-5 items-start">
           <div className="flex flex-col gap-4 md:gap-5">
             <ImageTile
-              file="hansgrohe Overhead shower_Man 2.jpg"
+              file="hansgrohe Overhead shower_Man 2.avif"
               index={5}
               className="aspect-[391/220] bg-[#ece2d6]"
               sizes="(min-width: 768px) 24vw, 100vw"
             />
             <ImageTile
-              file="hansgrohe Hand shower_Baby girl 2.jpg"
+              file="hansgrohe Hand shower_Baby girl 2.avif"
               index={6}
               className="aspect-[391/220] bg-[#e8dccf]"
               sizes="(min-width: 768px) 24vw, 100vw"
             />
             <ImageTile
-              file="hansgrohe Overhead shower_Lady - 3.6ft x 8ft 2.jpg"
+              file="hansgrohe Overhead shower_Lady - 3.6ft x 8ft 2.avif"
               index={7}
               className="aspect-[391/220] bg-[#d8c9b8]"
               sizes="(min-width: 768px) 24vw, 100vw"
@@ -102,12 +102,12 @@ export default function HansgroheCaseStudyPage() {
           </div>
 
           <ImageTile
-            file="PowderRain  leaflet A5 front 1.jpg"
+            file="PowderRain  leaflet A5 front 1.avif"
             index={8}
             className="aspect-[462/664] bg-[#7e7064]"
           />
           <ImageTile
-            file="PowderRain  leaflet A5 front_option 1 1.jpg"
+            file="PowderRain  leaflet A5 front_option 1 1.avif"
             index={9}
             className="aspect-[462/664] bg-[#6d6358]"
           />

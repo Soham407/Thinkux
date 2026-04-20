@@ -82,25 +82,25 @@ export default function HansgrohePage() {
 
         <div className="flex flex-col gap-5 md:pl-2">
           <CropTile
-            file="Group 472578.jpg"
+            file="Group 472578.avif"
             index={0}
             className="aspect-[560/265]"
             cropClassName="object-top"
           />
           <CropTile
-            file="Group 472578.jpg"
+            file="Group 472578.avif"
             index={1}
             className="aspect-[560/265]"
             cropClassName="object-center"
           />
           <CropTile
-            file="Group 472578.jpg"
+            file="Group 472578.avif"
             index={2}
             className="aspect-[560/265]"
             cropClassName="object-bottom"
           />
           <CropTile
-            file="Asset 5@2x 5.jpg"
+            file="Asset 5@2x 5.avif"
             index={3}
             className="aspect-[560/217]"
             cropClassName="object-contain bg-white"
