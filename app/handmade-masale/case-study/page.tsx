@@ -13,12 +13,14 @@ function ImageTile({
   className = "",
   sizes = "(min-width: 768px) 45vw, 100vw",
   cropClassName = "",
+  priority = false,
 }: {
   file: string;
   index: number;
   className?: string;
   sizes?: string;
   cropClassName?: string;
+  priority?: boolean;
 }) {
   return (
     <motion.div
@@ -35,6 +37,9 @@ function ImageTile({
         height={900}
         className={`h-full w-full object-cover ${cropClassName}`.trim()}
         sizes={sizes}
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -51,11 +56,13 @@ export default function HandmadeMasaleCaseStudy() {
             file="IMG_7064 1.avif"
             index={0}
             className="h-[220px] md:h-[300px]"
+            priority
           />
           <ImageTile
             file="IMG_6899 1.avif"
             index={1}
             className="h-[220px] md:h-[300px]"
+            priority
           />
         </div>
 

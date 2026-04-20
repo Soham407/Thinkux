@@ -7,7 +7,15 @@ import { assetPath } from "@/lib/assetPath";
 
 const FOLDER = "Endo Lighting";
 
-function Tile({ file, index }: { file: string; index: number }) {
+function Tile({
+  file,
+  index,
+  priority = false,
+}: {
+  file: string;
+  index: number;
+  priority?: boolean;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,6 +31,9 @@ function Tile({ file, index }: { file: string; index: number }) {
         height={900}
         className="w-full h-auto object-cover"
         sizes="(min-width: 768px) 30vw, 100vw"
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -35,9 +46,9 @@ export default function EndoCaseStudy() {
 
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          <Tile file="Campaign ab.jpg 1.jpg" index={0} />
-          <Tile file="Campaign aa.jpg 1.jpg" index={1} />
-          <Tile file="Campaign ac.jpg 1.jpg" index={2} />
+          <Tile file="Campaign ab.jpg 1.jpg" index={0} priority />
+          <Tile file="Campaign aa.jpg 1.jpg" index={1} priority />
+          <Tile file="Campaign ac.jpg 1.jpg" index={2} priority />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">

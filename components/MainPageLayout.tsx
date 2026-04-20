@@ -73,6 +73,9 @@ export function MainPageLayout({ brand }: { brand: MainPageBrand }) {
                 height={1200}
                 className="w-full h-auto object-cover"
                 sizes="(min-width: 768px) 40vw, 100vw"
+                priority={i === 0}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
               />
             </motion.div>
           ))}

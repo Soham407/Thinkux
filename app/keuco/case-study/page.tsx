@@ -13,12 +13,14 @@ function ImageTile({
   className = "",
   sizes = "(min-width: 768px) 30vw, 100vw",
   cropClassName = "",
+  priority = false,
 }: {
   file: string;
   index: number;
   className?: string;
   sizes?: string;
   cropClassName?: string;
+  priority?: boolean;
 }) {
   return (
     <motion.div
@@ -35,6 +37,9 @@ function ImageTile({
         height={1600}
         className={`h-full w-full object-contain ${cropClassName}`.trim()}
         sizes={sizes}
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -51,16 +56,19 @@ export default function KeucoCaseStudyPage() {
             file="Advt 3 1.avif"
             index={0}
             className="aspect-[454/606] bg-[#f2eee7]"
+            priority
           />
           <ImageTile
             file="Advt 4 1.avif"
             index={1}
             className="aspect-[454/606] bg-[#08151d]"
+            priority
           />
           <ImageTile
             file="Advt 5 1.avif"
             index={2}
             className="aspect-[454/606] bg-[#f0ede7]"
+            priority
           />
         </div>
 

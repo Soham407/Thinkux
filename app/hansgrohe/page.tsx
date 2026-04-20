@@ -15,12 +15,14 @@ function CropTile({
   className = "",
   cropClassName = "",
   sizes = "(min-width: 768px) 40vw, 100vw",
+  priority = false,
 }: {
   file: string;
   index: number;
   className?: string;
   cropClassName?: string;
   sizes?: string;
+  priority?: boolean;
 }) {
   return (
     <motion.div
@@ -36,6 +38,9 @@ function CropTile({
         fill
         className={`object-cover ${cropClassName}`.trim()}
         sizes={sizes}
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -86,6 +91,7 @@ export default function HansgrohePage() {
             index={0}
             className="aspect-[560/265]"
             cropClassName="object-top"
+            priority
           />
           <CropTile
             file="Group 472578.avif"
