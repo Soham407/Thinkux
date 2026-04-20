@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Think UX — Portfolio Website
 
-## Getting Started
+Agency portfolio site for Think UX. Currently ships 4 pages for two brands: **Marigold** (Banquets 'N' Conventions) and **Endo Lighting** (Japanese lighting brand).
 
-First, run the development server:
+## Pages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Route | Description |
+|---|---|
+| `/marigold` | Marigold main page — copy + image stack |
+| `/marigold/case-study` | Marigold case study — asymmetric image grid |
+| `/endo` | Endo Lighting main page — copy + image stack |
+| `/endo/case-study` | Endo Lighting case study — image grid |
+
+## Adding a new brand
+
+1. Copy the brand's asset folder from `Think UX Website Assets/` into `public/assets/`:
+   ```bash
+   cp -r "/Volumes/Soham/ThinkUX/Think UX Website Assets/<Brand Name>" public/assets/
+   ```
+
+2. Add the brand data to `lib/brands.ts` — two entries: `<brand>Main` and `<brand>CaseStudy`.
+
+3. Create the routes:
+   - `app/<brand>/page.tsx` — import `MainPageLayout` and pass the brand data
+   - `app/<brand>/case-study/page.tsx` — use `CaseStudyLayout` for symmetric grids, or custom JSX + `CaseStudyHeader` for asymmetric layouts
+
+4. Commit and push — Vercel auto-deploys.
+
+## Asset structure
+
+```
+public/assets/
+├── Logo.png
+├── Marigold/
+├── Endo Lighting/
+└── carousel/          ← client logo strip (footer)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Source assets (all 19 brands) live at `/Volumes/Soham/ThinkUX/Think UX Website Assets/` on the local machine. Only the folders used by live pages are committed to this repo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design source
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Figma PNG exports are at `/Volumes/Soham/ThinkUX/Figma-Bulk(PNG)/` — not in this repo. Open them as the reference when building or adjusting a page.
 
-## Learn More
+## Dev
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev     # http://localhost:3000
+npm run build   # verify no broken image paths before pushing
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router, TypeScript, Turbopack)
+- Tailwind CSS v4 (`@theme` in `app/globals.css` — no `tailwind.config.ts`)
+- Framer Motion — scroll-reveal animations
+- Inter font via `next/font/google`
+- Deployed on Vercel
