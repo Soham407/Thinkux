@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #1a1a1a;
   --muted: #6b7280;
-  --brand-blue: #2e7fc6;
+  --brand-blue: #2e81ff;
   --brand-blue-soft: #e8f1fa;
   --brand-orange: #ec7f2e;
   --border: #e5e7eb;
@@ -18,14 +18,22 @@
   --color-brand-soft: var(--brand-blue-soft);
   --color-accent: var(--brand-orange);
   --color-border: var(--border);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-instrument-sans);
 }
 
 html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: "TASA Orbiter Variable", "TASA Orbiter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 * {

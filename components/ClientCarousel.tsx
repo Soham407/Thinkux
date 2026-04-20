@@ -23,6 +23,10 @@ const LOGOS = [
 ];
 
 const LINKS: Record<string, string> = {
+  "Group 472608.jpg": "/hansgrohe",
+  "Group 472610.jpg": "/handmade-masale",
+  "Group 472611.jpg": "/kalika-steel",
+  "Group 472609.jpg": "/keuco",
   "Group 472612.jpg": "/endo",
   "image 61.jpg": "/marigold",
 };
@@ -30,7 +34,7 @@ const LINKS: Record<string, string> = {
 export function ClientCarousel() {
   const loop = [...LOGOS, ...LOGOS];
   return (
-    <div className="relative w-full overflow-hidden marquee-mask px-6">
+    <div className="relative w-full overflow-x-hidden overflow-y-visible marquee-mask px-6 py-3 -my-3">
       <ul className="flex items-center gap-4 w-max marquee-track">
         {loop.map((file, i) => {
           const href = LINKS[file];
@@ -40,20 +44,20 @@ export function ClientCarousel() {
               alt=""
               width={180}
               height={180}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
             />
           );
           return (
             <li
               key={`${file}-${i}`}
-              className="shrink-0 overflow-hidden rounded-2xl border border-[color:var(--border)] bg-white marquee-item"
+              className="shrink-0 rounded-2xl bg-white marquee-item"
             >
               {href ? (
-                <Link href={href} className="block h-full w-full">
+                <Link href={href} className="group relative z-0 block h-full w-full hover:z-10">
                   {inner}
                 </Link>
               ) : (
-                inner
+                <div className="group relative z-0 h-full w-full hover:z-10">{inner}</div>
               )}
             </li>
           );

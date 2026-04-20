@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
+import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
 import { ClientCarousel } from "@/components/ClientCarousel";
 import { PillButtons } from "@/components/PillButtons";
 
-const inter = Inter({
-  variable: "--font-inter",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
 
@@ -34,8 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]">
+    <html lang="en" className={`${instrumentSans.variable} h-full`} suppressHydrationWarning>
+      <body
+        className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]"
+        suppressHydrationWarning
+      >
         <main className="flex-1">{children}</main>
         <PillButtons />
         <footer id="site-footer" className="pb-10">

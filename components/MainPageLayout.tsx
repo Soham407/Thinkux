@@ -28,17 +28,17 @@ export function MainPageLayout({ brand }: { brand: MainPageBrand }) {
         <div className="flex flex-col gap-8 md:sticky md:top-8 md:self-start">
           <BrandHeading name={brand.name} tagline={brand.tagline} />
 
-          <p className="text-[15px] leading-7 text-[color:var(--foreground)]/80 max-w-xl">
+          <p className="font-body text-[15px] leading-7 text-[color:var(--foreground)]/80 max-w-xl">
             {brand.intro}
           </p>
 
           {brand.sections.map((section) => (
             <div key={section.title} className="max-w-xl">
-              <h2 className="text-lg font-semibold mb-2">{section.title}</h2>
+              <h2 className="font-display text-lg font-semibold mb-2">{section.title}</h2>
               {section.body.split("\n\n").map((para, pi) => (
                 <p
                   key={pi}
-                  className="text-[15px] leading-7 text-[color:var(--foreground)]/75 [&:not(:last-child)]:mb-4"
+                  className="font-body text-[15px] leading-7 text-[color:var(--foreground)]/75 [&:not(:last-child)]:mb-4"
                 >
                   {para}
                 </p>
@@ -49,9 +49,9 @@ export function MainPageLayout({ brand }: { brand: MainPageBrand }) {
           <div>
             <a
               href={brand.readMoreHref ?? "#"}
-              className="inline-block rounded-full border border-[color:var(--border)] px-6 py-2 text-sm font-medium text-[color:var(--foreground)]/80 hover:bg-black/[0.02]"
+              className="font-body inline-block rounded-full border border-[color:var(--border)] px-6 py-2 text-sm font-medium text-[color:var(--foreground)]/80 hover:bg-black/[0.02]"
             >
-              read more
+              see more
             </a>
           </div>
         </div>

@@ -31,7 +31,7 @@ function Tile({ file, index }: { file: string; index: number }) {
 export default function EndoCaseStudy() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
-      <CaseStudyHeader name="Endo Lightning" />
+      <CaseStudyHeader name="Endo Lighting" />
 
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
