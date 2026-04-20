@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { assetPath } from "@/lib/assetPath";
 
 const LOGOS = [
@@ -21,16 +22,19 @@ const LOGOS = [
   "Mask group.jpg",
 ];
 
+const LINKS: Record<string, string> = {
+  "Group 472612.jpg": "/endo",
+  "image 61.jpg": "/marigold",
+};
+
 export function ClientCarousel() {
   const loop = [...LOGOS, ...LOGOS];
   return (
     <div className="relative w-full overflow-hidden marquee-mask px-6">
       <ul className="flex items-center gap-4 w-max marquee-track">
-        {loop.map((file, i) => (
-          <li
-            key={`${file}-${i}`}
-            className="shrink-0 overflow-hidden rounded-2xl border border-[color:var(--border)] bg-white marquee-item"
-          >
+        {loop.map((file, i) => {
+          const href = LINKS[file];
+          const inner = (
             <Image
               src={assetPath("carousel", file)}
               alt=""
@@ -38,8 +42,22 @@ export function ClientCarousel() {
               height={180}
               className="h-full w-full object-cover"
             />
-          </li>
-        ))}
+          );
+          return (
+            <li
+              key={`${file}-${i}`}
+              className="shrink-0 overflow-hidden rounded-2xl border border-[color:var(--border)] bg-white marquee-item"
+            >
+              {href ? (
+                <Link href={href} className="block h-full w-full">
+                  {inner}
+                </Link>
+              ) : (
+                inner
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
