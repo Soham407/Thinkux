@@ -118,10 +118,10 @@ export const handmadeMasaleMain: MainPageBrand = {
   ],
   assetFolder: "Handmade Masale",
   images: [
-    "IMG_6920 1.jpg",
-    "IMG_6792 1.jpg",
-    "IMG_7106 1.jpg",
-    "IMG_7137 1.jpg",
+    "IMG_6920 1.avif",
+    "IMG_6792 1.avif",
+    "IMG_7106 1.avif",
+    "IMG_7137 1.avif",
   ],
 };
 

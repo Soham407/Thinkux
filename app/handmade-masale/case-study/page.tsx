@@ -48,12 +48,12 @@ export default function HandmadeMasaleCaseStudy() {
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           <ImageTile
-            file="IMG_7064 1.jpg"
+            file="IMG_7064 1.avif"
             index={0}
             className="h-[220px] md:h-[300px]"
           />
           <ImageTile
-            file="IMG_6899 1.jpg"
+            file="IMG_6899 1.avif"
             index={1}
             className="h-[220px] md:h-[300px]"
           />
@@ -61,13 +61,13 @@ export default function HandmadeMasaleCaseStudy() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 md:gap-5 items-stretch">
           <ImageTile
-            file="IMG_7149 1.jpg"
+            file="IMG_7149 1.avif"
             index={2}
             className="bg-white"
             cropClassName="object-contain"
           />
           <ImageTile
-            file="Group 472562.jpg"
+            file="Group 472562.avif"
             index={3}
             className="bg-white"
             cropClassName="object-contain p-2 md:p-2"
@@ -77,21 +77,21 @@ export default function HandmadeMasaleCaseStudy() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           <ImageTile
-            file="Group.jpg"
+            file="Group.avif"
             index={4}
             className="bg-black aspect-[461/632]"
             cropClassName="object-contain"
             sizes="(min-width: 768px) 30vw, 100vw"
           />
           <ImageTile
-            file="Clip path group.jpg"
+            file="Clip path group.avif"
             index={5}
             className="bg-black aspect-[447/632]"
             cropClassName="object-contain"
             sizes="(min-width: 768px) 30vw, 100vw"
           />
           <ImageTile
-            file="Group-1.jpg"
+            file="Group-1.avif"
             index={6}
             className="bg-black aspect-[461/632]"
             cropClassName="object-contain"
