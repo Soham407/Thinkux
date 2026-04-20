@@ -1,4 +1,5 @@
 @AGENTS.md
+@.claude/skills/thinkux-site/SKILL.md
 
 # Think UX — Portfolio Case Study Site
 

@@ -83,3 +83,19 @@ Edit `app/globals.css` `:root` vars. Current:
 - **Endo Case Study** — built from guessed tile order; not yet verified against PNG
 
 When the user next edits Endo, follow the same cycle: open the PNG, show the current rendered page, ask for corrections.
+
+## Adding a new brand (step-by-step for Codex)
+
+1. Copy the brand folder from local source into `public/assets/`:
+   ```bash
+   cp -r "/Volumes/Soham/ThinkUX/Think UX Website Assets/<Brand Name>" public/assets/
+   ```
+2. List exact filenames: `ls "public/assets/<Brand Name>/"` — never guess filenames.
+3. Open the Figma PNG from `/Volumes/Soham/ThinkUX/Figma-Bulk(PNG)/` with the Read tool to see layout.
+4. Ask the user for copy text (intro + Challenges / Our Strategy / Solution). Do not OCR from PNG.
+5. Add `<brand>Main` and `<brand>CaseStudy` entries to `lib/brands.ts`.
+6. Create `app/<brand>/page.tsx` using `MainPageLayout`.
+7. Create `app/<brand>/case-study/page.tsx` — custom JSX if asymmetric, `CaseStudyLayout` if symmetric.
+8. Add the brand's carousel logo filename → route mapping in `components/ClientCarousel.tsx` `LINKS` record.
+9. Run `npm run build` — fix any broken paths before committing.
+10. `git add public/assets/<brand> ... && git commit && git push` — Vercel auto-deploys.
