@@ -2,18 +2,24 @@ import Link from "next/link";
 import { ThinkUxLogo } from "@/components/ThinkUxLogo";
 
 const cases = [
-  { href: "/marigold", label: "Marigold", sub: "Banquets 'N' Conventions" },
-  { href: "/marigold/case-study", label: "Marigold — Case Study", sub: "" },
+  { href: "/marigold", label: "Marigold", sub: "Banquets \u2018N\u2019 Conventions" },
+  { href: "/marigold/case-study", label: "Marigold \u2014 Case Study", sub: "" },
   { href: "/endo", label: "Endo Lighting", sub: "Lighting systems" },
-  { href: "/endo/case-study", label: "Endo — Case Study", sub: "" },
+  { href: "/endo/case-study", label: "Endo \u2014 Case Study", sub: "" },
   { href: "/kalika-steel", label: "Kalika Steel", sub: "TMT bars and infrastructure" },
-  { href: "/kalika-steel/case-study", label: "Kalika Steel — Case Study", sub: "" },
+  { href: "/kalika-steel/case-study", label: "Kalika Steel \u2014 Case Study", sub: "" },
   { href: "/handmade-masale", label: "Handmade Masale", sub: "Homemade spice blends" },
-  { href: "/handmade-masale/case-study", label: "Handmade Masale — Case Study", sub: "" },
+  { href: "/handmade-masale/case-study", label: "Handmade Masale \u2014 Case Study", sub: "" },
   { href: "/hansgrohe", label: "Hansgrohe", sub: "Bathroom and shower solutions" },
-  { href: "/hansgrohe/case-study", label: "Hansgrohe — Case Study", sub: "" },
+  { href: "/hansgrohe/case-study", label: "Hansgrohe \u2014 Case Study", sub: "" },
   { href: "/keuco", label: "KEUCO", sub: "Bathroom fittings and accessories" },
-  { href: "/keuco/case-study", label: "KEUCO — Case Study", sub: "" },
+  { href: "/keuco/case-study", label: "KEUCO \u2014 Case Study", sub: "" },
+  { href: "/cheesiano", label: "Cheesiano Pizza", sub: "A bright, lively visual language for pizza" },
+  { href: "/cheesiano/case-study", label: "Cheesiano \u2014 Case Study", sub: "" },
+  { href: "/tcg", label: "TCG", sub: "A real estate developer with a legacy of building trust" },
+  { href: "/tcg/case-study", label: "TCG \u2014 Case Study", sub: "" },
+  { href: "/ruby-hall", label: "Ruby Hall Clinic", sub: "Healthcare built on legacy and care" },
+  { href: "/ruby-hall/case-study", label: "Ruby Hall \u2014 Case Study", sub: "" },
 ];
 
 export default function Home() {

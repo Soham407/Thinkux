@@ -5,16 +5,18 @@ import { motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
-const FOLDER = "Marigold";
+const FOLDER = "TCG";
 
 function Tile({
   file,
   index,
   priority = false,
+  spanFull = false,
 }: {
   file: string;
   index: number;
   priority?: boolean;
+  spanFull?: boolean;
 }) {
   return (
     <motion.div
@@ -22,7 +24,7 @@ function Tile({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
-      className="overflow-hidden rounded-sm"
+      className={`overflow-hidden rounded-sm ${spanFull ? "md:col-span-3" : ""}`}
     >
       <Image
         src={assetPath(FOLDER, file)}
@@ -30,7 +32,7 @@ function Tile({
         width={1200}
         height={900}
         className="w-full h-auto object-cover"
-        sizes="(min-width: 768px) 45vw, 100vw"
+        sizes={spanFull ? "100vw" : "(min-width: 768px) 33vw, 100vw"}
         priority={priority}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
@@ -39,26 +41,21 @@ function Tile({
   );
 }
 
-export default function MarigoldCaseStudy() {
+export default function TcgCaseStudy() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
-      <CaseStudyHeader name="Marigold" tagline={"Banquets \u2018N\u2019 Conventions"} />
+      <CaseStudyHeader name="TCG" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 items-start">
-        <div className="flex flex-col gap-4 md:gap-5">
-          <Tile file="image 11.avif" index={0} priority />
-          <Tile file="image 13.avif" index={1} priority />
-          <Tile file="image 27.avif" index={2} />
-        </div>
-
-        <div className="flex flex-col gap-4 md:gap-5">
-          <Tile file="image 12.avif" index={3} priority />
-          <Tile file="Mask group.avif" index={4} />
-          <div className="grid grid-cols-2 gap-4 md:gap-5">
-            <Tile file="m1@2x 1.avif" index={5} />
-            <Tile file="m4@2x 1.avif" index={6} />
-          </div>
-          <Tile file="m2@2x 1.avif" index={7} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        {/* Row 1: Three equal columns */}
+        <Tile file="Group 472541.avif" index={0} priority />
+        <Tile file="Layer_1 2.avif" index={1} priority />
+        <Tile file="Group 472581.avif" index={2} priority />
+        
+        {/* Row 2: 4th image (1 col) and Logo (2 cols) */}
+        <Tile file="Group 472538.avif" index={3} />
+        <div className="md:col-span-2">
+          <Tile file="Group 472637.avif" index={4} />
         </div>
       </div>
     </section>

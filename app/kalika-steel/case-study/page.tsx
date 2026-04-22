@@ -53,14 +53,14 @@ export default function KalikaSteelCaseStudy() {
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           <ImageTile
-            file="Group 472560.jpg"
+            file="Group 472560.avif"
             index={0}
             className="aspect-[478/363]"
             cropClassName="object-left"
             priority
           />
           <ImageTile
-            file="Group 472560.jpg"
+            file="Group 472560.avif"
             index={1}
             className="aspect-[478/363]"
             cropClassName="object-right"
@@ -70,21 +70,21 @@ export default function KalikaSteelCaseStudy() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1.08fr_0.92fr] gap-4 md:gap-5 items-end">
           <div className="flex flex-col gap-4 md:gap-5">
-            <ImageTile file="Group-1.jpg" index={2} className="aspect-[695/528]" />
-            <ImageTile file="Group.jpg" index={3} className="aspect-[695/528]" />
+            <ImageTile file="Group-1.avif" index={2} className="aspect-[695/528]" />
+            <ImageTile file="Group.avif" index={3} className="aspect-[695/528]" />
           </div>
 
           <div className="flex flex-col gap-4 md:gap-5 self-end">
-            <ImageTile file="Group 472530.jpg" index={4} className="aspect-[694/430]" />
+            <ImageTile file="Group 472530.avif" index={4} className="aspect-[694/430]" />
             <div className="grid grid-cols-2 items-end gap-4 md:gap-5">
               <ImageTile
-                file="Clip path group 1.jpg"
+                file="Clip path group 1.avif"
                 index={5}
                 className="aspect-[333/760]"
                 sizes="(min-width: 768px) 22vw, 50vw"
               />
               <ImageTile
-                file="Clip path group 2.jpg"
+                file="Clip path group 2.avif"
                 index={6}
                 className="aspect-[333/760]"
                 sizes="(min-width: 768px) 22vw, 50vw"
@@ -95,19 +95,19 @@ export default function KalikaSteelCaseStudy() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           <ImageTile
-            file="Group 472561.jpg"
+            file="Group 472561.avif"
             index={7}
             className="aspect-[459/342]"
             sizes="(min-width: 768px) 30vw, 100vw"
           />
           <ImageTile
-            file="Layer_1-2.jpg"
+            file="Layer_1-2.avif"
             index={8}
             className="aspect-[451/342]"
             sizes="(min-width: 768px) 30vw, 100vw"
           />
           <ImageTile
-            file="Layer_1-3.jpg"
+            file="Layer_1-3.avif"
             index={9}
             className="aspect-[450/342]"
             sizes="(min-width: 768px) 30vw, 100vw"

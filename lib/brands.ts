@@ -21,7 +21,7 @@ export const marigoldMain: MainPageBrand = {
     },
   ],
   assetFolder: "Marigold",
-  images: ["image 30.jpg", "image 29.jpg", "image 31.jpg"],
+  images: ["image 30.avif", "image 29.avif", "image 31.avif"],
 };
 
 export const marigoldCaseStudy: CaseStudyBrand = {
@@ -29,14 +29,14 @@ export const marigoldCaseStudy: CaseStudyBrand = {
   tagline: "Banquets \u2018N\u2019 Conventions",
   assetFolder: "Marigold",
   tiles: [
-    { file: "image 11.jpg" },
-    { file: "image 12.jpg" },
-    { file: "image 13.jpg" },
-    { file: "Mask group.jpg" },
-    { file: "image 27.jpg", span: "full" },
-    { file: "m1@2x 1.jpg" },
-    { file: "m4@2x 1.jpg" },
-    { file: "m2@2x 1.jpg", span: "full" },
+    { file: "image 11.avif" },
+    { file: "image 12.avif" },
+    { file: "image 13.avif" },
+    { file: "Mask group.avif" },
+    { file: "image 27.avif", span: "full" },
+    { file: "m1@2x 1.avif" },
+    { file: "m4@2x 1.avif" },
+    { file: "m2@2x 1.avif", span: "full" },
   ],
 };
 
@@ -59,20 +59,20 @@ export const endoMain: MainPageBrand = {
     },
   ],
   assetFolder: "Endo Lighting",
-  images: ["Group.jpg", "Group-1.jpg", "Group-2.jpg", "Group-3.jpg"],
+  images: ["Group.avif", "Group-1.avif", "Group-2.avif", "Group-3.avif"],
 };
 
 export const endoCaseStudy: CaseStudyBrand = {
   name: "Endo Lighting",
   assetFolder: "Endo Lighting",
   tiles: [
-    { file: "Campaign aa.jpg 1.jpg" },
-    { file: "Campaign ab.jpg 1.jpg" },
-    { file: "Campaign ac.jpg 1.jpg", span: "full" },
-    { file: "New Campaign_1.jpg 1.jpg" },
-    { file: "New Campaign_2.jpg 1.jpg" },
-    { file: "New Campaign_3.jpg 1.jpg" },
-    { file: "New Campaign_4.jpg 1.jpg" },
+    { file: "Campaign aa.jpg 1.avif" },
+    { file: "Campaign ab.jpg 1.avif" },
+    { file: "Campaign ac.jpg 1.avif", span: "full" },
+    { file: "New Campaign_1.jpg 1.avif" },
+    { file: "New Campaign_2.jpg 1.avif" },
+    { file: "New Campaign_3.jpg 1.avif" },
+    { file: "New Campaign_4.jpg 1.avif" },
   ],
 };
 
@@ -95,7 +95,7 @@ export const kalikaMain: MainPageBrand = {
     },
   ],
   assetFolder: "Kalika Steel",
-  images: ["Layer_1.jpg", "Layer_1-1.jpg", "Group 472531.jpg"],
+  images: ["Layer_1.avif", "Layer_1-1.avif", "Group 472531.avif"],
 };
 
 export const handmadeMasaleMain: MainPageBrand = {
@@ -167,4 +167,121 @@ export const hansgroheMain: MainPageBrand = {
   ],
   assetFolder: "Hansgrohe",
   images: ["Group 472578.avif", "Asset 5@2x 5.avif"],
+};
+
+export const rubyHallMain: MainPageBrand = {
+  name: "Ruby Hall Clinic",
+  intro:
+    "Founded in 1959, Ruby Hall Clinic stands for dependable and compassionate healthcare, built on a long-standing commitment to patient-centred care and medical excellence. As part of the Grant Medical Foundation, the institution has grown from a small nursing home into one of Pune\u2019s most trusted multi-speciality healthcare networks, known for combining clinical expertise with advanced medical technology.\n\nOver a long-standing association of more than fifteen years, we have worked alongside Ruby Hall in shaping aspects of its brand communication, supporting the hospital as it continues to evolve while staying grounded in the values that have defined its reputation.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "As Ruby Hall approached its 50-year milestone, the institution sought to evolve its visual identity to reflect both its legacy and its continued growth. The existing logo represented an earlier phase of the hospital\u2019s journey, and the milestone called for an identity that could strengthen recognition while expressing the trust and values associated with the Ruby Hall name.\n\nA nationwide design bidding process was initiated, inviting multiple studios to propose a new identity that could represent the institution for the years ahead. Our proposal progressed through successive rounds of evaluation, ultimately being selected by the trustees as Ruby Hall\u2019s new visual identity.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The identity was conceived around a colour band that reflects the philosophy of care associated with Ruby Hall. Within this framework, we used a system that uses colour to express the values that define the institution\u2019s approach to healthcare.\n\nRed symbolises a one-stop, comprehensive healthcare solution, yellow reflects prosperity, green represents life, and blue stands for trust. Together, they form a distinctive visual language that keeps the identity recognisable while quietly communicating the values at the heart of Ruby Hall.",
+    },
+    {
+      title: "Solution",
+      body: "Following the adoption of the new logo, we continued to shape the hospital\u2019s brand communication across campaigns and public outreach. This included communication around treatments, initiatives, and healthcare awareness across print, radio, and editorial platforms, alongside supporting in reputation management. This work has helped ensure that Ruby Hall\u2019s messaging continues to reflect the trust and credibility associated with the institution.",
+    },
+  ],
+  assetFolder: "Ruby Hall Clinic",
+  images: [
+    "1775024268554-b9a6bb75-be38-49f5-89db-0eecd92a193a_1 2.avif",
+    "Artboard 1@2x 2.avif",
+    "b 1.avif",
+  ],
+  readMoreHref: "/ruby-hall/case-study",
+};
+
+export const rubyHallCaseStudy: CaseStudyBrand = {
+  name: "Ruby Hall Clinic",
+  assetFolder: "Ruby Hall Clinic",
+  tiles: [
+    { file: "Frame 12 1.avif" },
+    { file: "Untitled-2-01 1.avif" },
+    { file: "ruby 1 1.avif" },
+    { file: "Asset 1@4x 1.avif" },
+    { file: "Layer_1.avif" },
+    { file: "Group 472636.avif" },
+    { file: "Group 472563.avif" },
+    { file: "Frame.avif" },
+    { file: "Artboard 4@2x 1.avif" },
+    { file: "Artboard 3@2x 1.avif" }, // tiles[9]
+  ],
+};
+
+export const cheesianoMain: MainPageBrand = {
+  name: "Cheesiano Pizza",
+  intro:
+    "Cheesiano Pizza was inspired by a desire to do pizza differently. At a time when established brands dominated the category, the founders focused on freshness, quality ingredients, and the simple belief that the \u201cfeel\u201d of a pizza matters as much as its taste. The brand embraces a youthful, approachable spirit built around healthy, hygienic ingredients and the everyday joy of sharing pizza. Its identity reflects this philosophy through a bright, lively visual language that feels cheerful, contemporary, and full of flavour.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The pizza market had already drawn clear lines, with one brand dominating delivery and another shaping the dine-in experience. For a new entrant, finding space in this market was not simply about offering another pizza, but about building a brand that could sustain itself in a category where most independent pizza ventures struggled to last. Cheesiano needed a model that could serve to different customer habits while still feeling like one brand.",
+    },
+    {
+      title: "Our Strategy",
+      body: "Rather than committing to a single format, we structured the brand to bring not just the best of two worlds, but three store models \u2014 Express, Delivery, and Dine-in; allowing brand to respond to different ways people enjoy pizza. This allowed Cheesiano to address multiple dining occasions within one brand system: quick service for people on the move, delivery for convenience at home, and dine-in spaces for enjoying pizza in person.",
+    },
+    {
+      title: "Solution",
+      body: "We developed Cheesiano\u2019s brand identity, including the logo and visual language that shaped its recognisable personality. The identity extended across packaging, marketing communication, and store environments, ensuring the experience felt consistent whether encountered online, through delivery, or inside the outlet. Alongside the brand\u2019s creation, we also helped shape the outlet experience and led its franchise expansion journey as Cheesiano Pizza grew to over 25 locations, carrying the same identity across its outlets.",
+    },
+  ],
+  assetFolder: "Cheesiano Pizza",
+  images: ["Group 472635.avif", "Frame 9.avif", "Frame 10.avif", "Group 472634.avif"],
+};
+
+export const cheesianoCaseStudy: CaseStudyBrand = {
+  name: "Cheesiano Pizza",
+  assetFolder: "Cheesiano Pizza",
+  tiles: [
+    { file: "Son & daughter Post 2.avif" },
+    { file: "Junior Pizza Maker certificate 1 2.avif" },
+    { file: "Saturday Post 2.avif" },
+    { file: "Mumbai Post 2.avif" },
+    { file: "Group 472567.avif" },
+    { file: "Independence Day Post 2.avif" },
+    { file: "Pro Kabaddi 2.avif" },
+    { file: "Pizza Maker Competition Post option 2.avif" },
+    { file: "Frindship day post 2.avif" },
+    { file: "Frame.avif", span: "full" },
+  ],
+};
+
+export const tcgMain: MainPageBrand = {
+  name: "TCG",
+  intro:
+    "The Construction Group (TCG) is a real estate developer with a legacy of building residential and commercial spaces rooted in trust, functionality, and long-term value. As the brand expanded across multiple projects and developments, it needed consistent and adaptable communication across its offerings and market segments.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The requirement included evolving aspects of the brand identity, along with building consistency across multiple project launches, ensuring that each development could establish its own identity while remaining aligned with TCG\u2019s brand value.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach was to build a flexible brand language that could extend across multiple project launches while maintaining coherence. Each development was given its own identity through naming, project logo, visual expression, and messaging, shaped around its context and audience, while remaining connected to the larger TCG brand. This allowed individual projects to establish their presence, while collectively strengthening a more consistent and recognisable identity for TCG.",
+    },
+    {
+      title: "Solution",
+      body: "We worked with TCG across multiple aspects of brand and marketing communication, including the evolution of its logo and overall positioning. The engagement extended across more than 20 project launches, where we developed project names, identities, and positioning aligned to their respective target markets. This was supported by executing both above-the-line and below-the-line campaigns across print, outdoor, and on-ground communication. Through a combination of brand development and project-level communication, TCG was able to build a consistent yet adaptable presence across its portfolio.",
+    },
+  ],
+  assetFolder: "TCG",
+  images: ["Layer_1 1.avif", "Group 472542.avif"],
+};
+
+export const tcgCaseStudy: CaseStudyBrand = {
+  name: "TCG",
+  assetFolder: "TCG",
+  tiles: [
+    { file: "Group 472541.avif" },
+    { file: "Layer_1 2.avif" },
+    { file: "Group 472581.avif" },
+    { file: "Group 472538.avif" },
+    { file: "Group 472637.avif" },
+  ],
 };
