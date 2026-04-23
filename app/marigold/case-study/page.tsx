@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -21,7 +21,7 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className="overflow-hidden rounded-sm"
     >
       <Image
@@ -48,7 +48,7 @@ export default function MarigoldCaseStudy() {
         <div className="flex flex-col gap-4 md:gap-5">
           <Tile file="image 11.avif" index={0} priority />
           <Tile file="image 13.avif" index={1} priority />
-          <Tile file="image 27.avif" index={2} />
+          <Tile file="image 27.avif" index={2} priority />
         </div>
 
         <div className="flex flex-col gap-4 md:gap-5">

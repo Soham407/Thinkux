@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { BrandHeading } from "./BrandHeading";
 import { ThinkUxLogo } from "./ThinkUxLogo";
 import { assetPath } from "@/lib/assetPath";
@@ -57,26 +57,31 @@ export function MainPageLayout({ brand }: { brand: MainPageBrand }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5" aria-label="Brand visuals">
           {brand.images.map((file, i) => (
             <motion.div
               key={file}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
-              className="relative overflow-hidden rounded-sm"
+              transition={{ 
+                duration: 0.6, 
+                delay: i < 2 ? 0 : i * 0.05, 
+                ease: "easeOut" 
+              }}
+              className="relative overflow-hidden rounded-sm bg-black/[0.02]"
+              style={{ aspectRatio: '3/4' }}
             >
               <Image
                 src={assetPath(brand.assetFolder, file)}
                 alt={`${brand.name} visual ${i + 1}`}
-                width={900}
-                height={1200}
-                className="w-full h-auto object-cover"
+                fill
+                className="w-full h-full object-cover"
                 sizes="(min-width: 768px) 40vw, 100vw"
-                priority={i === 0}
-                loading={i === 0 ? "eager" : "lazy"}
-                fetchPriority={i === 0 ? "high" : "auto"}
+                priority={i < 2}
+                loading={i < 2 ? "eager" : "lazy"}
+                fetchPriority={i < 2 ? "high" : "auto"}
+                unoptimized={true}
               />
             </motion.div>
           ))}

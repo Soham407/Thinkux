@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -27,7 +27,7 @@ function ImageTile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${className}`.trim()}
     >
       <Image
@@ -72,6 +72,7 @@ export default function HandmadeMasaleCaseStudy() {
             index={2}
             className="bg-white"
             cropClassName="object-contain"
+            priority
           />
           <ImageTile
             file="Group 472562.avif"
@@ -79,6 +80,7 @@ export default function HandmadeMasaleCaseStudy() {
             className="bg-white"
             cropClassName="object-contain p-2 md:p-2"
             sizes="(min-width: 768px) 40vw, 100vw"
+            priority
           />
         </div>
 

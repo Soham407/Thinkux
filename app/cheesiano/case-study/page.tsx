@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -23,7 +23,7 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${spanFull ? "md:col-span-3" : ""}`}
     >
       <Image
@@ -51,7 +51,7 @@ export default function CheesianoCaseStudy() {
         <Tile file="Junior Pizza Maker certificate 1 2.avif" index={1} priority />
         <Tile file="Saturday Post 2.avif" index={2} priority />
         
-        <Tile file="Mumbai Post 2.avif" index={3} />
+        <Tile file="Mumbai Post 2.avif" index={3} priority />
         <Tile file="Group 472567.avif" index={4} />
         <Tile file="Independence Day Post 2.avif" index={5} />
         

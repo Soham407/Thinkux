@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Image from "next/image";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
@@ -27,7 +27,7 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 3) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${spanFull ? "md:col-span-3" : ""} ${className}`}
     >
       <Image
@@ -38,6 +38,7 @@ function Tile({
         className={`w-full h-auto block ${imgClassName}`}
         sizes={spanFull ? "100vw" : "(min-width: 768px) 33vw, 100vw"}
         priority={priority}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -55,7 +56,7 @@ export default function RealEstatePage() {
           <Tile file="DSK Developers_02 1.avif" index={1} priority />
           <Tile file="DSK Developers_03 1.avif" index={2} priority />
           
-          <Tile file="HP - A - 1 1.avif" index={3} />
+          <Tile file="HP - A - 1 1.avif" index={3} priority />
           <Tile file="HP - A - 2 1.avif" index={4} />
           <Tile file="HP - A - 3 1.avif" index={5} />
         </div>

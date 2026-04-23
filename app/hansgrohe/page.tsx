@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { BrandHeading } from "@/components/BrandHeading";
 import { ThinkUxLogo } from "@/components/ThinkUxLogo";
 import { assetPath } from "@/lib/assetPath";

@@ -52,6 +52,7 @@ export default function Home() {
           <li key={c.href}>
             <Link
               href={c.href}
+              prefetch={false}
               className="block rounded-2xl border border-[color:var(--border)] p-6 hover:bg-black/[0.02] transition"
             >
               <div className="font-display text-xl font-semibold">{c.label}</div>

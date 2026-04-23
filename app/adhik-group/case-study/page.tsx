@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -23,7 +23,7 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${className}`}
     >
       <Image
@@ -44,10 +44,12 @@ function Tile({
 function YouTubeTile({
   videoId,
   index,
+  priority = false,
   className = "",
 }: {
   videoId: string;
   index: number;
+  priority?: boolean;
   className?: string;
 }) {
   return (
@@ -55,7 +57,7 @@ function YouTubeTile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm bg-gray-100 aspect-[9/16] ${className}`}
     >
       <iframe
@@ -82,7 +84,7 @@ export default function AdhikGroupCaseStudy() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
           <div className="flex flex-col gap-4 md:gap-5">
             <Tile file="Group 472592.avif" index={1} priority />
-            <Tile file="Kitchen Photo 2.avif" index={2} />
+            <Tile file="Kitchen Photo 2.avif" index={2} priority />
           </div>
           {/* O Bake Video */}
           <YouTubeTile videoId="rxjrx7I2kdE" index={3} />

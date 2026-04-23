@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -23,7 +23,11 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ 
+        duration: 0.5, 
+        delay: priority ? 0 : (index % 4) * 0.04, 
+        ease: "easeOut" 
+      }}
       className={`overflow-hidden rounded-sm ${spanFull ? "md:col-span-3" : ""}`}
     >
       <Image
@@ -53,7 +57,7 @@ export default function TcgCaseStudy() {
         <Tile file="Group 472581.avif" index={2} priority />
         
         {/* Row 2: 4th image (1 col) and Logo (2 cols) */}
-        <Tile file="Group 472538.avif" index={3} />
+        <Tile file="Group 472538.avif" index={3} priority />
         <div className="md:col-span-2">
           <Tile file="Group 472637.avif" index={4} />
         </div>

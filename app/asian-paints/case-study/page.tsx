@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Image from "next/image";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
@@ -26,7 +26,7 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm w-full ${className}`}
     >
       <Image
@@ -37,6 +37,7 @@ function Tile({
         className={`w-full h-auto block ${imgClassName}`}
         sizes="(min-width: 768px) 33vw, 100vw"
         priority={priority}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -56,8 +57,8 @@ export default function AsianPaintsCaseStudy() {
 
         {/* Row 2: 2 wide posters */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Tile file="Asset 3@2x 4.avif" index={2} />
-          <Tile file="Asset 4@2x 4.avif" index={3} />
+          <Tile file="Asset 3@2x 4.avif" index={2} priority />
+          <Tile file="Asset 4@2x 4.avif" index={3} priority />
         </div>
 
         {/* Row 3: 2 wide posters */}

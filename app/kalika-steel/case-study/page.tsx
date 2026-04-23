@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { assetPath } from "@/lib/assetPath";
@@ -28,7 +28,7 @@ function ImageTile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${className}`.trim()}
     >
       <Image
@@ -71,8 +71,8 @@ export default function KalikaSteelCaseStudy() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1.08fr_0.92fr] gap-4 md:gap-5 items-end">
           <div className="flex flex-col gap-4 md:gap-5">
-            <ImageTile file="Group-1.avif" index={2} className="aspect-[695/528]" />
-            <ImageTile file="Group.avif" index={3} className="aspect-[695/528]" />
+            <ImageTile file="Group-1.avif" index={2} className="aspect-[695/528]" priority />
+            <ImageTile file="Group.avif" index={3} className="aspect-[695/528]" priority />
           </div>
 
           <div className="flex flex-col gap-4 md:gap-5 self-end">

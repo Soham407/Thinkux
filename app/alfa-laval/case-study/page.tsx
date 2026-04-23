@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 import { alfaLavalCaseStudy } from "@/lib/brands";
@@ -22,7 +22,11 @@ function Tile({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ 
+        duration: 0.5, 
+        delay: priority ? 0 : (index % 4) * 0.04, 
+        ease: "easeOut" 
+      }}
       className="overflow-hidden rounded-sm w-full"
     >
       <Image
@@ -35,6 +39,7 @@ function Tile({
         priority={priority}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
+        unoptimized={true}
       />
     </motion.div>
   );

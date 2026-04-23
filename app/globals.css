@@ -21,11 +21,14 @@
   --font-sans: var(--font-instrument-sans);
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  min-h-full flex flex-col bg-white text-[color:var(--foreground)];
+  text-rendering: optimizeLegibility;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .font-display {
@@ -48,6 +51,7 @@ body {
 
 .marquee-track {
   animation: marquee 40s linear infinite;
+  will-change: transform;
 }
 
 .marquee-track:hover {

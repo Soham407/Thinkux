@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
 
@@ -13,19 +13,21 @@ function ImageTile({
   className = "",
   sizes = "(min-width: 768px) 30vw, 100vw",
   cropClassName = "",
+  priority = false,
 }: {
   file: string;
   index: number;
   className?: string;
   sizes?: string;
   cropClassName?: string;
+  priority?: boolean;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.04, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: priority ? 0 : (index % 4) * 0.04, ease: "easeOut" }}
       className={`overflow-hidden rounded-sm ${className}`.trim()}
     >
       <Image
@@ -35,6 +37,8 @@ function ImageTile({
         height={1600}
         className={`h-full w-full object-contain ${cropClassName}`.trim()}
         sizes={sizes}
+        priority={priority}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </motion.div>
   );
@@ -52,12 +56,14 @@ export default function HansgroheCaseStudyPage() {
             index={0}
             className="aspect-[562/402] bg-[#080808]"
             sizes="(min-width: 768px) 32vw, 100vw"
+            priority
           />
           <ImageTile
             file="Axor_Branding_CC 1.avif"
             index={1}
             className="aspect-[865/402] bg-[#080808]"
             sizes="(min-width: 768px) 58vw, 100vw"
+            priority
           />
         </div>
 
@@ -66,11 +72,13 @@ export default function HansgroheCaseStudyPage() {
             file="ADVERTORIAL 2.avif"
             index={2}
             className="aspect-[462/664] bg-white"
+            priority
           />
           <ImageTile
             file="PowderRain leaflet A5 back 1.avif"
             index={3}
             className="aspect-[462/664] bg-white"
+            priority
           />
           <ImageTile
             file="ADVERTORIAL 1 1.avif"

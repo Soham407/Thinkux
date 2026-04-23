@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
-import { ClientCarousel } from "@/components/ClientCarousel";
-import { PillButtons } from "@/components/PillButtons";
+import dynamic from "next/dynamic";
+import MotionProvider from "@/components/MotionProvider";
+
+const ClientCarousel = dynamic(() => import("@/components/ClientCarousel").then(mod => mod.ClientCarousel), { ssr: false });
+const PillButtons = dynamic(() => import("@/components/PillButtons").then(mod => mod.PillButtons), { ssr: false });
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -40,11 +43,13 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]"
         suppressHydrationWarning
       >
-        <main className="flex-1">{children}</main>
-        <PillButtons />
-        <footer id="site-footer" className="pb-10">
-          <ClientCarousel />
-        </footer>
+        <MotionProvider>
+          <main className="flex-1">{children}</main>
+          <PillButtons />
+          <footer id="site-footer" className="pb-10">
+            <ClientCarousel />
+          </footer>
+        </MotionProvider>
       </body>
     </html>
   );

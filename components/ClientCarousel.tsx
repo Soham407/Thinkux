@@ -46,6 +46,7 @@ export function ClientCarousel() {
               width={180}
               height={180}
               className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+              unoptimized={true}
             />
           );
           return (
