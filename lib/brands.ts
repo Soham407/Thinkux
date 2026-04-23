@@ -287,6 +287,51 @@ export const tcgCaseStudy: CaseStudyBrand = {
   ],
 };
 
+export const adhikGroupMain: MainPageBrand = {
+  name: "Adhik Group",
+  intro:
+    "Adhik Group is a multi-vertical food business operating across dining, caf\u00e9, sweets, packaged products, and export. With offerings spanning different formats and audiences, the brand required a more defined and cohesive presence across its touchpoints.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The brand lacked visibility and had an unclear positioning across its offerings. While the business had expanded in scope, this was not clearly reflected in how it was perceived. There was a need to establish a stronger, more consistent identity and shift the perception from a functional business to a more defined and recognisable brand.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach focused on bringing clarity to the brand by defining its scope, mapping its verticals, and identifying existing potential and grey areas. This was combined with establishing a clearer positioning rooted in trust and transparency, while creating a consistent brand language that could extend across all touchpoints and strengthen visibility.",
+    },
+    {
+      title: "Solution",
+      body: "We worked on redefining the brand at both a group and sub-brand level, including redesigning the primary identity and developing identities for its verticals. This was supported by brand mapping to structure the overall offering and bring clarity to its positioning.\n\nThe work extended into outlet experience design to ensure consistency across physical spaces. In addition, we supported the brand across communication, including social media, website design, and ongoing brand management, maintaining a consistent tone and language across platforms. Packaging for product lines was also developed in line with the overall brand system.",
+    },
+  ],
+  assetFolder: "Adhik Group",
+  images: [
+    "Group.avif",
+    "Adhik_FineDine 2.avif",
+    "Group-1.avif",
+    "Group 110.avif",
+    "Group 109.avif",
+  ],
+};
+
+export const adhikGroupCaseStudy: CaseStudyBrand = {
+  name: "Adhik Group",
+  assetFolder: "Adhik Group",
+  tiles: [
+    { file: "Clip path group 1.avif", span: "full" },
+    { file: "image 982.avif" },
+    { file: "Kitchen Photo 2.avif" },
+    { file: "image 983.avif" },
+    { file: "image 987.avif" },
+    { file: "18.avif" },
+    { file: "Rectangle.avif" },
+    { file: "Puranpoli 5.avif" },
+    { file: "Adhik_FineDine 2.avif" },
+    { file: "did You Know_.avif" },
+  ],
+};
+
 export const seasonsMain: MainPageBrand = {
   name: "Seasons Mall",
   intro:
@@ -343,12 +388,7 @@ export const alfaLavalMain: MainPageBrand = {
     },
   ],
   assetFolder: "Alfa Laval",
-  images: [
-    "Alfa Newsletter 2008 1.avif",
-    "Asset 1@2x 5.avif",
-    "Asset 10@2x 2.avif",
-    "Asset 11@2x 2.avif",
-  ],
+  images: ["Group 472633.avif"],
   readMoreHref: "/alfa-laval/case-study",
 };
 
@@ -369,6 +409,106 @@ export const alfaLavalCaseStudy: CaseStudyBrand = {
     { file: "2 1.avif" },
     { file: "4 1.avif" },
     { file: "5 1.avif" },
-    { file: "Group 472633.avif", span: "full" },
+  ],
+};
+
+export const ganeshBhelMain: MainPageBrand = {
+  name: "Ganesh Bhel",
+  intro:
+    "Ganesh Bhel is an Indian street food brand with an established presence built over time through a consistent product offering and customer familiarity. As the brand looked to expand beyond its existing setup, we worked with them to structure and develop their franchise-led growth.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The requirement was to translate a strong, experience-driven local brand into a scalable and repeatable franchise model, while maintaining consistency in operations, product quality, and overall brand experience across locations.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach focused on building a scalable business and brand framework that could carry forward the essence of Ganesh Bhel while adapting to a multi-location format. This involved aligning operational systems, customer experience, and brand communication to ensure consistency, while also enabling flexibility for growth and expansion.",
+    },
+    {
+      title: "Solution",
+      body: "We worked on developing and launching the franchise programme for Ganesh Bhel, supporting the brand across business, operational, and experience design. This included structuring franchise and operational models, defining ROI and ROR frameworks, and shaping the overall outlet and customer experience. Alongside this, we contributed to brand positioning and provided ongoing business consultancy, ensuring consistency across outlets and communication as the brand expanded.",
+    },
+  ],
+  assetFolder: "Ganesh Bhel/Main page",
+  images: [
+    "Asset 5@2x 3.avif",
+    "Asset 8@2x 3.avif",
+    "Asset 4@2x 3.avif",
+    "Asset 1@2x 3.avif",
+  ],
+  readMoreHref: "/ganesh-bhel/case-study",
+};
+
+export const ganeshBhelCaseStudy: CaseStudyBrand = {
+  name: "Ganesh Bhel",
+  assetFolder: "Ganesh Bhel/Case Study",
+  tiles: [
+    { file: "Group 472572.avif" },
+    { file: "Asset 6@2x 3.avif" },
+    { file: "Asset 2@2x 1.avif" },
+    { file: "Asset 2@2x 3.avif" },
+    { file: "Layer_1.avif" },
+    { file: "Asset 3@2x 3.avif" },
+    { file: "Asset 3@2x 1.avif" },
+    { file: "Asset 6@2x 1.avif" },
+    { file: "Asset 7@2x 1.avif" },
+    { file: "Asset 9@2x 1.avif" },
+  ],
+};
+
+export const asianPaintsMain: MainPageBrand = {
+  name: "Asian Paints",
+  intro:
+    "Asian Paints is one of India\u2019s leading paint companies, with a focus on delivering innovative and sustainable solutions across decorative and industrial coatings. As the brand continues to evolve, we worked with them on shaping communication around workplace safety and behavioural change at their manufacturing facilities.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The requirement was to translate complex safety protocols and behavioural standards into a clear, engaging, and culturally relevant communication language for the workforce. The challenge was to move beyond instructional messaging towards building a culture of safety and collective responsibility.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach focused on humanising safety protocols through a concept-led visual language. Rather than speaking only about rules, the communication was built around the idea of \u2018Pari-vartan\u2019 \u2014 a shift in perspective that encourages individuals to take ownership of their safety and that of their colleagues. This involved creating relatable narratives and visual metaphors that could be easily understood and internalised across the facility.",
+    },
+    {
+      title: "Solution",
+      body: "We developed a series of internal communication campaigns, including posters, banners, and digital creatives, designed around themes of awareness, vigilance, and behavioural safety. This included creating a distinctive visual identity for the \u2018Pari-vartan\u2019 initiative, which was extended across multiple touchpoints within the manufacturing plants.\n\nThrough illustrations, clear messaging, and engaging layouts, the campaigns helped in strengthening the culture of safety at Asian Paints\u2019 facilities, making protocols more accessible and encouraging a more proactive approach to workplace well-being.",
+    },
+  ],
+  assetFolder: "Asian Paints/Main Page",
+  images: ["image 40.avif", "image 41.avif", "image 42.avif"],
+  readMoreHref: "/asian-paints/case-study",
+};
+
+export const asianPaintsCaseStudy: CaseStudyBrand = {
+  name: "Asian Paints",
+  assetFolder: "Asian Paints/Case study",
+  tiles: [
+    { file: "Asset 1@2x 4.avif" },
+    { file: "Asset 2@2x 4.avif" },
+    { file: "Asset 3@2x 4.avif" },
+    { file: "Asset 4@2x 4.avif" },
+    { file: "Asset 5@2x 4.avif" },
+    { file: "Asset 6@2x 4.avif" },
+    { file: "Asset 8@2x 4.avif" },
+    { file: "Asset 9@2x 2.avif" },
+    { file: "Asset 10@2x 1.avif" },
+    { file: "Asset 7@2x 2.avif" },
+    { file: "Asset 11@2x 1.avif" },
+    { file: "image 44.avif" },
+    { file: "image 36.avif" },
+  ],
+};
+
+export const garwareCaseStudy: CaseStudyBrand = {
+  name: "Garware",
+  assetFolder: "Garware",
+  tiles: [
+    { file: "Dolnet Leaflet front page option 1 1.avif" },
+    { file: "Dolnet Leaflet front page option 2 1.avif" },
+    { file: "Dolnet Leaflet front page option 3 1.avif" },
+    { file: "Dolnet Leaflet front page option 4 1.avif" },
+    { file: "Dolnet Leaflet front page option 5 1.avif" },
+    { file: "Dolnet Leaflet front page option 6 1.avif" },
   ],
 };

@@ -22,8 +22,17 @@ const cases = [
   { href: "/tcg/case-study", label: "TCG \u2014 Case Study", sub: "" },
   { href: "/seasons", label: "Seasons Mall", sub: "A vibrant retail and lifestyle destination in Pune" },
   { href: "/seasons/case-study", label: "Seasons Mall \u2014 Case Study", sub: "" },
+  { href: "/adhik-group", label: "Adhik Group", sub: "A multi-vertical food business" },
+  { href: "/adhik-group/case-study", label: "Adhik Group \u2014 Case Study", sub: "" },
   { href: "/ruby-hall", label: "Ruby Hall Clinic", sub: "Healthcare built on legacy and care" },
   { href: "/ruby-hall/case-study", label: "Ruby Hall \u2014 Case Study", sub: "" },
+  { href: "/ganesh-bhel", label: "Ganesh Bhel", sub: "An Indian street food brand built on legacy and care" },
+  { href: "/ganesh-bhel/case-study", label: "Ganesh Bhel \u2014 Case Study", sub: "" },
+  { href: "/garware", label: "Garware", sub: "Technical fibres and industrial solutions" },
+  { href: "/jalans", label: "Jalan\u2019s", sub: "Brand strategy and communication" },
+  { href: "/real-estate", label: "Real Estate", sub: "Communication and marketing for property developers" },
+  { href: "/asian-paints", label: "Asian Paints", sub: "Safety and behavioural change communication" },
+  { href: "/asian-paints/case-study", label: "Asian Paints \u2014 Case Study", sub: "" },
 ];
 
 export default function Home() {
