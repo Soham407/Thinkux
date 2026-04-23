@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
-import dynamic from "next/dynamic";
 import MotionProvider from "@/components/MotionProvider";
-
-const ClientCarousel = dynamic(() => import("@/components/ClientCarousel").then(mod => mod.ClientCarousel), { ssr: false });
-const PillButtons = dynamic(() => import("@/components/PillButtons").then(mod => mod.PillButtons), { ssr: false });
+import { ClientCarousel } from "@/components/ClientCarousel";
+import { PillButtons } from "@/components/PillButtons";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",

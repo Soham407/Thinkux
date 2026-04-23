@@ -51,39 +51,39 @@ export default function AsianPaintsCaseStudy() {
       <div className="flex flex-col gap-4 md:gap-5">
         {/* Row 1: 2 wide posters */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Tile file="Asset 1@2x 4.avif" index={0} priority />
-          <Tile file="Asset 2@2x 4.avif" index={1} priority />
+          <Tile file="image 44.avif" index={0} priority />
+          <Tile file="image 36.avif" index={1} priority />
         </div>
 
         {/* Row 2: 2 wide posters */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Tile file="Asset 3@2x 4.avif" index={2} priority />
-          <Tile file="Asset 4@2x 4.avif" index={3} priority />
+          <Tile file="Asset 8@2x 4.avif" index={2} priority />
+          <Tile file="Asset 9@2x 2.avif" index={3} priority />
         </div>
 
         {/* Row 3: 2 wide posters */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Tile file="Asset 5@2x 4.avif" index={4} />
-          <Tile file="Asset 6@2x 4.avif" index={5} />
+          <Tile file="Asset 10@2x 1.avif" index={4} />
+          <Tile file="Asset 11@2x 1.avif" index={5} />
         </div>
 
         {/* Row 4: 3 vertical posters */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          <Tile file="Asset 8@2x 4.avif" index={6} />
-          <Tile file="Asset 9@2x 2.avif" index={7} />
-          <Tile file="Asset 10@2x 1.avif" index={8} />
+          <Tile file="Asset 1@2x 4.avif" index={6} />
+          <Tile file="Asset 2@2x 4.avif" index={7} />
+          <Tile file="Asset 3@2x 4.avif" index={8} />
         </div>
 
-        {/* Row 5: 3 vertical/mixed posters */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          <Tile file="Asset 7@2x 2.avif" index={9} />
-          <Tile file="Asset 11@2x 1.avif" index={10} />
-          <Tile file="image 44.avif" index={11} />
+        {/* Row 5: 3 images aligned with Asset 7 as main */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5 items-stretch">
+          <Tile file="Asset 4@2x 4.avif" index={9} className="md:col-span-1" imgClassName="h-full object-cover" />
+          <Tile file="Asset 5@2x 4.avif" index={10} className="md:col-span-1" imgClassName="h-full object-cover" />
+          <Tile file="Asset 7@2x 2.avif" index={11} className="md:col-span-2" />
         </div>
 
-        {/* Row 6: Merchandising full width */}
+        {/* Row 6: Single image */}
         <div className="w-full">
-          <Tile file="image 36.avif" index={12} className="!max-w-none" />
+          <Tile file="Asset 6@2x 4.avif" index={12} className="!max-w-none" />
         </div>
       </div>
     </section>
