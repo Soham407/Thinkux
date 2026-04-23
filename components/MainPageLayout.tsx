@@ -16,6 +16,7 @@ export type MainPageBrand = {
   assetFolder: string;
   images: string[];
   readMoreHref?: string;
+  youtubeId?: string;
 };
 
 export function MainPageLayout({ brand }: { brand: MainPageBrand }) {

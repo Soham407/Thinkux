@@ -96,6 +96,7 @@ export const kalikaMain: MainPageBrand = {
   ],
   assetFolder: "Kalika Steel",
   images: ["Layer_1.avif", "Layer_1-1.avif", "Group 472531.avif"],
+  youtubeId: "qmNJUM0CG-g",
 };
 
 export const handmadeMasaleMain: MainPageBrand = {
@@ -283,5 +284,91 @@ export const tcgCaseStudy: CaseStudyBrand = {
     { file: "Group 472581.avif" },
     { file: "Group 472538.avif" },
     { file: "Group 472637.avif" },
+  ],
+};
+
+export const seasonsMain: MainPageBrand = {
+  name: "Seasons Mall",
+  intro:
+    "Seasons Mall was launched in the Magarpatta area of Pune, entering a developing yet competitive landscape of malls and shopping destinations. We worked on the mall\u2019s launch, supporting its communication as it established a strong presence while connecting with a largely captive audience within the locality.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The communication needed to create visibility within an already active and cluttered landscape of malls and shopping destinations, with multiple malls in close proximity, while building relevance for the immediate surrounding audience, positioning the mall as a convenient and engaging destination rather than just another option.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach was to position the mall as an accessible and engaging destination within its market, combining everyday relevance with a clear expression of its retail, food, and entertainment mix. While campaigns explored ideas of proximity and convenience alongside visually driven communication that translated the offering into simple, striking metaphors, the focus remained on engaging the captive audience within the immediate locality rather than addressing the Pune city at large. This was supported by a more self-sustained communication approach built around consistent, localised visibility.",
+    },
+    {
+      title: "Solution",
+      body: "We worked on the launch and ongoing communication for Seasons Mall, developing campaigns across print, outdoor, and on-ground touchpoints. This included both broader brand communication as well as targeted campaigns for the Magarpatta catchment, such as positioning the mall as \u201cat your doorstep.\u201d\n\nAs part of a self-sustained visibility approach, we developed Seasons Expressions \u2014 a four-page newspaper pull-out featuring brands within the mall, distributed through leading publications such as The Times of India, Sakal, and Lokmat. This enabled individual stores to gain visibility while collectively driving footfall to the mall. Through consistent and context-driven communication, the brand was able to establish a stronger and more recognisable presence within its market.",
+    },
+  ],
+  assetFolder: "Seasons Mall",
+  images: ["2 6.avif", "4 2.avif", "8 1.avif", "10 2.avif"],
+};
+
+export const seasonsCaseStudy: CaseStudyBrand = {
+  name: "Seasons Mall",
+  assetFolder: "Seasons Mall",
+  tiles: [
+    { file: "1 may  maharashtra din 1 1.avif" },
+    { file: "1 ST AANIVARSARY 03 1.avif" },
+    { file: "fathers day Mailer_01 1.avif" },
+    { file: "E greetings diwali 2.avif" },
+    { file: "kitty party 2 2.avif" },
+    { file: "Launch Mailers2 1.avif" },
+    { file: "Launch Mailers4 1.avif" },
+    { file: "Launch Mailers 5.avif" },
+  ],
+};
+
+export const alfaLavalMain: MainPageBrand = {
+  name: "Alfa Laval",
+  intro:
+    "Alfa Laval operates within the HVAC and industrial solutions space, offering highly engineered products and systems across sectors. We worked with the brand on its communication across touchpoints, supporting product visibility and engagement through a mix of technical and brand-led communication.",
+  sections: [
+    {
+      title: "Challenges",
+      body: "The communication needed to present complex, engineering-driven solutions in a way that remained accessible and engaging, while maintaining the brand\u2019s technical credibility and clarity across different formats and audiences.",
+    },
+    {
+      title: "Our Strategy",
+      body: "The approach focused on simplifying technical communication through clear visual structures and concept-led narratives, allowing products and solutions to be understood beyond specifications. This was balanced with a consistent visual language that could adapt across format \u2014 from detailed, information-heavy layouts to more expressive and brand-oriented communication, ensuring clarity without losing engagement.",
+    },
+    {
+      title: "Solution",
+      body: "We developed communication across multiple formats including magazine ads, newsletters, exhibitions, product launches, and product showcases. The work ranged from structured, information-driven layouts to more conceptual visual expressions, depending on the context and medium. Exhibition spaces and product displays were designed to present solutions in a clear and organised manner, while print and editorial formats helped translate technical offerings into more accessible communication. Together, these efforts created a cohesive and adaptable communication system for the brand across touchpoints.",
+    },
+  ],
+  assetFolder: "Alfa Laval",
+  images: [
+    "Alfa Newsletter 2008 1.avif",
+    "Asset 1@2x 5.avif",
+    "Asset 10@2x 2.avif",
+    "Asset 11@2x 2.avif",
+  ],
+  readMoreHref: "/alfa-laval/case-study",
+};
+
+export const alfaLavalCaseStudy: CaseStudyBrand = {
+  name: "Alfa Laval",
+  assetFolder: "Alfa Laval",
+  tiles: [
+    { file: "Alfa Newsletter 2008 1.avif" },
+    { file: "Alfa Laval fruit Processing advt c2c 1.avif" },
+    { file: "alfa laval ad 1.avif" },
+    { file: "Asset 1@2x 5.avif" },
+    { file: "Asset 10@2x 2.avif" },
+    { file: "Asset 11@2x 2.avif" },
+    { file: "Asset 2@2x 5.avif" },
+    { file: "Asset 3@2x 5.avif" },
+    { file: "Asset 4@2x 5.avif" },
+    { file: "1 1930155275.avif" },
+    { file: "2 1.avif" },
+    { file: "4 1.avif" },
+    { file: "5 1.avif" },
+    { file: "Group 472633.avif", span: "full" },
   ],
 };

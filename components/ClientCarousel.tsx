@@ -25,14 +25,13 @@ const LOGOS = [
 const LINKS: Record<string, string> = {
   "Group 472608.avif": "/hansgrohe",
   "Group 472610.avif": "/handmade-masale",
-  "Group 472611.avif": "/kalika-steel",
-  "Group 472609.avif": "/keuco",
+  "Group 472613.avif": "/kalika-steel",
+  "Group 472611.avif": "/seasons",
   "Group 472612.avif": "/endo",
   "image 61.avif": "/marigold",
   "Group 472607.avif": "/ruby-hall",
   "Group 472615.avif": "/cheesiano",
 };
-
 export function ClientCarousel() {
   const loop = [...LOGOS, ...LOGOS];
   return (

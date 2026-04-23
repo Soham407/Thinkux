@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ThinkUxLogo } from "@/components/ThinkUxLogo";
 
 const cases = [
+  { href: "/alfa-laval", label: "Alfa Laval", sub: "Highly engineered products and systems" },
+  { href: "/alfa-laval/case-study", label: "Alfa Laval \u2014 Case Study", sub: "" },
   { href: "/marigold", label: "Marigold", sub: "Banquets \u2018N\u2019 Conventions" },
   { href: "/marigold/case-study", label: "Marigold \u2014 Case Study", sub: "" },
   { href: "/endo", label: "Endo Lighting", sub: "Lighting systems" },
@@ -18,6 +20,8 @@ const cases = [
   { href: "/cheesiano/case-study", label: "Cheesiano \u2014 Case Study", sub: "" },
   { href: "/tcg", label: "TCG", sub: "A real estate developer with a legacy of building trust" },
   { href: "/tcg/case-study", label: "TCG \u2014 Case Study", sub: "" },
+  { href: "/seasons", label: "Seasons Mall", sub: "A vibrant retail and lifestyle destination in Pune" },
+  { href: "/seasons/case-study", label: "Seasons Mall \u2014 Case Study", sub: "" },
   { href: "/ruby-hall", label: "Ruby Hall Clinic", sub: "Healthcare built on legacy and care" },
   { href: "/ruby-hall/case-study", label: "Ruby Hall \u2014 Case Study", sub: "" },
 ];

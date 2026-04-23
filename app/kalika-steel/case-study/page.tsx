@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { assetPath } from "@/lib/assetPath";
 
 const FOLDER = "Kalika Steel";
@@ -114,16 +115,7 @@ export default function KalikaSteelCaseStudy() {
           />
         </div>
 
-        <div className="overflow-hidden rounded-sm border border-dashed border-[color:var(--border)] bg-white">
-          <div className="flex min-h-[240px] md:min-h-[420px] flex-col items-center justify-center gap-3 px-6 py-10 text-center">
-            <div className="font-display text-4xl md:text-6xl font-medium tracking-tight text-[color:var(--foreground)]">
-              VIDEO
-            </div>
-            <p className="font-body max-w-sm text-sm md:text-base leading-6 text-[color:var(--foreground)]/70">
-              Add the YouTube link here.
-            </p>
-          </div>
-        </div>
+        <YouTubeEmbed id="qmNJUM0CG-g" index={10} />
       </div>
     </section>
   );

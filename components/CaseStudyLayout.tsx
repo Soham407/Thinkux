@@ -17,6 +17,7 @@ export type CaseStudyBrand = {
   tagline?: string;
   assetFolder: string;
   tiles: GridTile[];
+  youtubeId?: string;
 };
 
 export function CaseStudyLayout({ brand }: { brand: CaseStudyBrand }) {
