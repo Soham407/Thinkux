@@ -31,20 +31,20 @@ export function ClientCarousel() {
           return (
             <li
               key={`${file}-${i}`}
-              className="shrink-0 rounded-2xl bg-white marquee-item"
+              className="shrink-0 marquee-item"
             >
               <Link
                 href={href}
                 prefetch={false}
                 aria-label={label}
-                className="group relative z-0 block h-full w-full hover:z-10"
+                className="group relative z-0 flex h-full w-full items-center justify-center hover:z-10"
               >
                 <Image
                   src={assetPath("carousel", file)}
                   alt={label}
                   width={180}
                   height={180}
-                  className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+                  className="h-[calc(100%-8px)] w-[calc(100%-8px)] rounded-[5rem] border-2 border-gray-300 object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
                   unoptimized={true}
                 />
               </Link>
