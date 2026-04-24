@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { m as motion } from "framer-motion";
 import { BrandHeading } from "./BrandHeading";
 import { ThinkUxLogo } from "./ThinkUxLogo";
@@ -69,19 +68,13 @@ export function MainPageLayout({ brand }: { brand: MainPageBrand }) {
                 delay: i < 2 ? 0 : i * 0.05, 
                 ease: "easeOut" 
               }}
-              className="relative overflow-hidden rounded-sm bg-black/[0.02]"
-              style={{ aspectRatio: '3/4' }}
+              className="overflow-hidden rounded-sm bg-black/[0.02]"
             >
-              <Image
+              <img
                 src={assetPath(brand.assetFolder, file)}
                 alt={`${brand.name} visual ${i + 1}`}
-                fill
-                className="w-full h-full object-cover"
-                sizes="(min-width: 768px) 40vw, 100vw"
-                priority={i < 2}
+                className="block h-auto w-full"
                 loading={i < 2 ? "eager" : "lazy"}
-                fetchPriority={i < 2 ? "high" : "auto"}
-                unoptimized={true}
               />
             </motion.div>
           ))}
