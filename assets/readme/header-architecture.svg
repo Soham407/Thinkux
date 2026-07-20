@@ -1,0 +1,8 @@
+<svg width="1200" height="120" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Project Architecture Header</title>
+  <rect width="1200" height="120" fill="white" />
+  <rect x="0" y="59" width="1200" height="2" fill="#E8F1FA" />
+  <rect x="40" y="30" width="320" height="60" rx="30" fill="#FFF" stroke="#2E7FC6" stroke-width="2" />
+  <text x="200" y="68" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#2E7FC6" text-anchor="middle">Project Architecture</text>
+  <circle cx="60" cy="60" r="6" fill="#EC7F2E" />
+</svg>

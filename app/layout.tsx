@@ -46,6 +46,19 @@ export default function RootLayout({
           <PillButtons />
           <footer id="site-footer" className="pb-10">
             <ClientCarousel />
+            <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 font-body">
+              <div className="text-[color:var(--foreground)]/60 text-[15px] leading-relaxed">
+                You{"\u2019"}ve reached the end.<br />
+                Now let{"\u2019"}s build what{"\u2019"}s NEXT.
+              </div>
+              <div className="flex flex-wrap items-center gap-6 md:gap-10 text-[15px] text-[color:var(--foreground)]">
+                <a href="/brand" className="hover:text-[color:var(--brand-blue)] transition">Brand</a>
+                <a href="/business" className="hover:text-[color:var(--brand-blue)] transition">Business</a>
+                <a href="/about" className="hover:text-[color:var(--brand-blue)] transition">About Us</a>
+                <a href="/contact" className="hover:text-[color:var(--brand-blue)] transition">Contact</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--brand-blue)] transition">LinkedIn</a>
+              </div>
+            </div>
           </footer>
         </MotionProvider>
       </body>

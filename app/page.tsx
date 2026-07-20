@@ -38,8 +38,13 @@ const cases = [
 export default function Home() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
-      <div className="mb-16 md:mb-24">
+      <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <ThinkUxLogo />
+        <nav className="flex flex-wrap items-center gap-4 md:gap-8 font-body text-sm font-medium">
+          <Link href="/about" className="text-[color:var(--foreground)]/70 hover:text-[color:var(--brand-blue)] transition-colors">About Us</Link>
+          <Link href="/services" className="text-[color:var(--foreground)]/70 hover:text-[color:var(--brand-blue)] transition-colors">Services</Link>
+          <Link href="/strategic-consulting" className="text-[color:var(--foreground)]/70 hover:text-[color:var(--brand-blue)] transition-colors">Strategic Consulting</Link>
+        </nav>
       </div>
       <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
         Case Studies
