@@ -3,6 +3,7 @@ import { Instrument_Sans } from "next/font/google";
 import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
 import MotionProvider from "@/components/MotionProvider";
+import { GlobalHeader } from "@/components/GlobalHeader";
 import { ClientCarousel } from "@/components/ClientCarousel";
 import { PillButtons } from "@/components/PillButtons";
 
@@ -42,6 +43,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <MotionProvider>
+          <GlobalHeader />
           <main className="flex-1">{children}</main>
           <PillButtons />
           <footer id="site-footer" className="pb-10">
@@ -57,6 +59,10 @@ export default function RootLayout({
                 <a href="/about" className="hover:text-[color:var(--brand-blue)] transition">About Us</a>
                 <a href="/contact" className="hover:text-[color:var(--brand-blue)] transition">Contact</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--brand-blue)] transition">LinkedIn</a>
+                <a href="https://www.instagram.com/think__ux/" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--brand-blue)] transition flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  Instagram
+                </a>
               </div>
             </div>
           </footer>

@@ -4,17 +4,17 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-[1200px] px-6 md:px-10 min-h-[60vh] flex flex-col justify-center py-20 mt-4 md:mt-10">
-      <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16 lg:gap-24">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-16 lg:gap-24">
         
         {/* Left Column: Logo & Tagline */}
-        <div className="flex flex-col items-start shrink-0 w-full md:w-[260px] pt-1.5">
+        <div className="flex flex-col items-start shrink-0 w-full md:w-[260px]">
           <Link href="/">
             <Image 
-              src="/icons/think-ux-logo.svg" 
+              src="/logo.png" 
               alt="Think UX" 
               width={200} 
               height={200} 
-              className="w-[180px] h-auto mb-6 hover:opacity-90 transition-opacity"
+              className="w-[220px] md:w-[260px] h-auto mb-6 hover:opacity-90 transition-opacity"
               priority
             />
           </Link>

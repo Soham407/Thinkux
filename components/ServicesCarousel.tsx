@@ -88,7 +88,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
                   {service.desc}
                 </p>
 
-                <ul className="text-left space-y-[6px] inline-block mx-auto mt-auto mb-auto">
+                <ul className="text-left space-y-[6px] inline-block mx-auto mt-2 mb-4">
                   {service.items.map((item, i) => (
                     <li key={i} className={`flex items-start gap-2 font-body text-[12px] md:text-[13px] font-medium ${isActive ? "text-[#F6891F]" : "text-[#939191]"}`}>
                       <span className="mt-[2px] text-[10px]">•</span>

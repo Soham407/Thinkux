@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { m as motion } from "framer-motion";
 import { BrandHeading } from "@/components/BrandHeading";
-import { ThinkUxLogo } from "@/components/ThinkUxLogo";
 import { assetPath } from "@/lib/assetPath";
 import { hansgroheMain } from "@/lib/brands";
 
@@ -49,9 +48,6 @@ function CropTile({
 export default function HansgrohePage() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
-      <div className="mb-16 md:mb-24">
-        <ThinkUxLogo />
-      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1.02fr_0.98fr] gap-10 md:gap-12 items-start">
         <div className="flex flex-col gap-8 md:sticky md:top-8 md:self-start">

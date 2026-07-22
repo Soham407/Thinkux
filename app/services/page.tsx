@@ -65,11 +65,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="mx-auto max-w-[1200px] px-6 md:px-10 pt-10 pb-24 overflow-hidden min-h-screen">
-      <div className="mb-16">
-        <Link href="/">
-          <Image src="/icons/think-ux-logo.svg" alt="Think UX" width={100} height={100} className="w-24 h-auto hover:opacity-90 transition-opacity" />
-        </Link>
-      </div>
+
 
       <header className="mb-16 max-w-4xl">
         <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight text-[color:var(--foreground)] mb-4">

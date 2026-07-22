@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { m as motion } from "framer-motion";
 import { BrandHeading } from "./BrandHeading";
-import { ThinkUxLogo } from "./ThinkUxLogo";
+
 import { assetPath } from "@/lib/assetPath";
 
 export type GridTile = {
@@ -24,7 +24,6 @@ export function CaseStudyLayout({ brand }: { brand: CaseStudyBrand }) {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
       <div className="mb-16 md:mb-24">
-        <ThinkUxLogo />
       </div>
       <div className="mb-8">
         <BrandHeading name={brand.name} tagline={brand.tagline} />

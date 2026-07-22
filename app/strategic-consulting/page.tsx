@@ -67,11 +67,7 @@ const pillars = [
 export default function StrategicConsultingPage() {
   return (
     <div className="mx-auto max-w-[1200px] px-6 md:px-10 pt-10 pb-24 overflow-hidden min-h-screen">
-      <div className="mb-16">
-        <Link href="/">
-          <Image src="/icons/think-ux-logo.svg" alt="Think UX" width={100} height={100} className="w-24 h-auto" />
-        </Link>
-      </div>
+
 
       <header className="mb-16 max-w-4xl">
         <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight text-[color:var(--foreground)] mb-4">
@@ -82,75 +78,52 @@ export default function StrategicConsultingPage() {
         </p>
       </header>
 
-      {/* Mobile Layout */}
-      <div className="block md:hidden space-y-12 mt-12">
-        {pillars.map((pillar, idx) => (
-          <div key={idx} className="relative pl-6 border-l-[3px] border-[#2E3192]">
-            <h2 className="font-display text-2xl font-medium text-[#F6891F] mb-1">
-              {pillar.title}
-            </h2>
-            <div className="text-[#939191] text-sm mb-4">
-              {pillar.subtitle}
-            </div>
-            <p className="font-body text-[color:var(--foreground)]/90 text-sm leading-relaxed mb-4">
-              {pillar.desc}
-            </p>
-            <ul className="space-y-1">
-              {pillar.bullets.map((bullet, i) => (
-                <li key={i} className="text-sm text-[color:var(--foreground)]/80 flex items-start gap-2">
-                  <span className="font-bold text-[10px] mt-1">•</span>
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      {/* Desktop Layout */}
-      <div className="hidden md:block relative w-full aspect-[1421/1917] mt-16 mb-32">
-        <Image 
-          src="/icons/brand-strategy-consulting-map.svg" 
-          alt="Brand Strategy Consulting Map"
-          fill
-          className="object-contain"
-        />
-        
-        {pillars.map((pillar, idx) => {
-          const isLeft = idx % 2 === 0;
-          // Exact Y-percentages of the circles in the SVG: 90/1917, 448/1917, 806/1917, 1164/1917, 1521/1917, 1879/1917
-          const topPercents = [4.69, 23.37, 42.04, 60.72, 79.34, 98.01];
+      {/* Roadmap Layout - Horizontally Scrollable on Mobile */}
+      <div className="w-full overflow-x-auto mt-12 mb-32 pb-8">
+        <div className="relative w-[800px] md:w-full max-w-[1200px] aspect-[1421/1917] mx-auto">
+          <Image 
+            src="/icons/brand-strategy-consulting-map.svg" 
+            alt="Brand Strategy Consulting Map"
+            fill
+            className="object-contain"
+          />
           
-          return (
-            <div 
-              key={idx} 
-              className="absolute w-[36%] max-w-[400px]" 
-              style={{ 
-                top: `${topPercents[idx]}%`, 
-                transform: idx === 0 ? 'translateY(-28%)' : idx === 1 ? 'translateY(-55%)' : 'translateY(-45%)',
-                left: isLeft ? '12%' : '54%',
-              }}
-            >
-              <h2 className="font-display text-2xl lg:text-[28px] font-medium text-[#F6891F] mb-1">
-                {pillar.title}
-              </h2>
-              <div className="text-[#939191] text-xs lg:text-[13px] mb-4">
-                {pillar.subtitle}
+          {pillars.map((pillar, idx) => {
+            const isLeft = idx % 2 === 0;
+            // Exact Y-percentages of the circles in the SVG: 90/1917, 448/1917, 806/1917, 1164/1917, 1521/1917, 1879/1917
+            const topPercents = [4.69, 23.37, 42.04, 60.72, 79.34, 98.01];
+            
+            return (
+              <div 
+                key={idx} 
+                className="absolute w-[36%] max-w-[400px]" 
+                style={{ 
+                  top: `${topPercents[idx]}%`, 
+                  transform: idx === 0 ? 'translateY(-28%)' : idx === 1 ? 'translateY(-55%)' : 'translateY(-45%)',
+                  left: isLeft ? '12%' : '54%',
+                }}
+              >
+                <h2 className="font-display text-2xl lg:text-[28px] font-medium text-[#F6891F] mb-1">
+                  {pillar.title}
+                </h2>
+                <div className="text-[#939191] text-xs lg:text-[13px] mb-4">
+                  {pillar.subtitle}
+                </div>
+                <p className="font-body text-[color:var(--foreground)] text-sm lg:text-[15px] leading-relaxed mb-5">
+                  {pillar.desc}
+                </p>
+                <ul className="space-y-1.5">
+                  {pillar.bullets.map((bullet, i) => (
+                    <li key={i} className="text-[13px] lg:text-[14px] text-[color:var(--foreground)] flex items-start gap-2">
+                      <span className="font-bold text-[10px] mt-1.5">•</span> 
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="font-body text-[color:var(--foreground)] text-sm lg:text-[15px] leading-relaxed mb-5">
-                {pillar.desc}
-              </p>
-              <ul className="space-y-1.5">
-                {pillar.bullets.map((bullet, i) => (
-                  <li key={i} className="text-[13px] lg:text-[14px] text-[color:var(--foreground)] flex items-start gap-2">
-                    <span className="font-bold text-[10px] mt-1.5">•</span> 
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

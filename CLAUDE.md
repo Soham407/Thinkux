@@ -1,5 +1,7 @@
 @AGENTS.md
 @.claude/skills/thinkux-site/SKILL.md
+@.claude/skills/vision-verify/SKILL.md
+@.claude/skills/repo-cleaner/SKILL.md
 
 # Think UX — Portfolio Case Study Site
 
