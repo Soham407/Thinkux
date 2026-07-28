@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Think UX — Agency Portfolio Platform</title>
+  <desc id="desc">Hero banner showcasing Think UX agency portfolio platform built with Next.js 16, Tailwind CSS v4, and Framer Motion.</desc>
+
+  <defs>
+    <linearGradient id="bg-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090C15" />
+      <stop offset="50%" stop-color="#0E1322" />
+      <stop offset="100%" stop-color="#070910" />
+    </linearGradient>
+    
+    <linearGradient id="blue-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E81FF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2E81FF" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="orange-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC7F2E" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#EC7F2E" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141927" />
+      <stop offset="100%" stop-color="#0F131F" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="440" rx="20" fill="url(#bg-glow)" />
+  <rect x="0.5" y="0.5" width="1199" height="439" rx="19.5" stroke="#1E2638" stroke-width="1" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="100" r="180" fill="url(#blue-glow)" />
+  <circle cx="1000" cy="340" r="200" fill="url(#orange-glow)" />
+
+  <!-- Subtle Grid Pattern -->
+  <path d="M 0 80 L 1200 80 M 0 160 L 1200 160 M 0 240 L 1200 240 M 0 320 L 1200 320 M 0 400 L 1200 400" stroke="#1A2234" stroke-width="1" stroke-dasharray="4 8" opacity="0.4" />
+  <path d="M 200 0 L 200 440 M 400 0 L 400 440 M 600 0 L 600 440 M 800 0 L 800 440 M 1000 0 L 1000 440" stroke="#1A2234" stroke-width="1" stroke-dasharray="4 8" opacity="0.4" />
+
+  <!-- Left Content Column -->
+  <g id="hero-copy" transform="translate(56, 52)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="30" rx="15" fill="#131F33" stroke="#1E3A66" stroke-width="1" />
+      <circle cx="18" cy="15" r="4" fill="#EC7F2E" />
+      <text x="32" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E81FF" letter-spacing="1">AGENCY PORTFOLIO PLATFORM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Think UX</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="500" fill="#94A3B8">Bespoke Brand Strategy &amp; Visual Identity Showcase</text>
+    <text x="0" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#64748B">Powering high-fidelity digital experiences across India with</text>
+    <text x="0" y="182" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#64748B">a modern, animation-rich Next.js App Router stack.</text>
+
+    <!-- Key Metrics / Proof Pills -->
+    <g transform="translate(0, 220)">
+      <!-- Tech Badge 1 -->
+      <rect x="0" y="0" width="115" height="32" rx="8" fill="#121824" stroke="#1E2638" stroke-width="1" />
+      <text x="14" y="21" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="600" fill="#E2E8F0">Next.js 16</text>
+
+      <!-- Tech Badge 2 -->
+      <rect x="123" y="0" width="125" height="32" rx="8" fill="#121824" stroke="#1E2638" stroke-width="1" />
+      <text x="137" y="21" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="600" fill="#38BDF8">Tailwind v4</text>
+
+      <!-- Tech Badge 3 -->
+      <rect x="256" y="0" width="140" height="32" rx="8" fill="#121824" stroke="#1E2638" stroke-width="1" />
+      <text x="270" y="21" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="600" fill="#C084FC">Framer Motion</text>
+    </g>
+
+    <!-- Client Highlights -->
+    <g transform="translate(0, 282)">
+      <text x="0" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#64748B" letter-spacing="0.5">SHIPPING FOR INDUSTRY LEADERS</text>
+      <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#93C5FD">Marigold <tspan fill="#475569">•</tspan> Endo Lighting <tspan fill="#475569">•</tspan> Asian Paints <tspan fill="#475569">•</tspan> Hansgrohe</text>
+    </g>
+  </g>
+
+  <!-- Right UI Preview Mockup (Think UX Interface Component) -->
+  <g id="ui-mockup" transform="translate(620, 44)">
+    <!-- Main Window Container -->
+    <rect width="524" height="352" rx="14" fill="url(#card-grad)" stroke="#222B3E" stroke-width="1.5" />
+    
+    <!-- Window Header / Browser Chrome -->
+    <path d="M 0 14 Q 0 0 14 0 L 510 0 Q 524 0 524 14 L 524 38 L 0 38 Z" fill="#0C101A" />
+    <circle cx="20" cy="19" r="5" fill="#EF4444" opacity="0.8" />
+    <circle cx="36" cy="19" r="5" fill="#F59E0B" opacity="0.8" />
+    <circle cx="52" cy="19" r="5" fill="#10B981" opacity="0.8" />
+
+    <!-- Address Bar -->
+    <rect x="140" y="8" width="244" height="22" rx="6" fill="#161C2B" stroke="#232D42" stroke-width="1" />
+    <text x="262" y="23" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#94A3B8" text-anchor="middle">thinkux.agency/marigold</text>
+
+    <!-- Page Content Area -->
+    <g transform="translate(20, 52)">
+      <!-- Mini Header Chrome inside Content -->
+      <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">THINK UX</text>
+      
+      <!-- Split Layout Simulation -->
+      <!-- Left Column: Sticky Narrative -->
+      <g transform="translate(0, 32)">
+        <rect width="180" height="200" rx="8" fill="#111624" stroke="#1D2638" stroke-width="1" />
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Marigold</text>
+        <text x="14" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#2E81FF">Banquets 'N' Conventions</text>
+
+        <!-- Skeleton Text -->
+        <rect x="14" y="56" width="150" height="5" rx="2.5" fill="#263248" />
+        <rect x="14" y="66" width="130" height="5" rx="2.5" fill="#263248" />
+        <rect x="14" y="76" width="140" height="5" rx="2.5" fill="#263248" />
+
+        <text x="14" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#E2E8F0">Our Strategy</text>
+        <rect x="14" y="110" width="150" height="5" rx="2.5" fill="#263248" />
+        <rect x="14" y="120" width="120" height="5" rx="2.5" fill="#263248" />
+
+        <text x="14" y="144" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#E2E8F0">Solution</text>
+        <rect x="14" y="154" width="152" height="5" rx="2.5" fill="#263248" />
+        <rect x="14" y="164" width="110" height="5" rx="2.5" fill="#263248" />
+      </g>
+
+      <!-- Right Column: Visual Case Study Stack -->
+      <g transform="translate(192, 32)">
+        <!-- Card 1 -->
+        <rect width="292" height="94" rx="8" fill="#1A2336" stroke="#28354F" stroke-width="1" />
+        <rect x="12" y="12" width="268" height="70" rx="6" fill="#142138" />
+        <circle cx="146" cy="47" r="18" fill="#2E81FF" opacity="0.3" />
+        <path d="M 140 47 L 152 47 M 146 41 L 146 53" stroke="#38BDF8" stroke-width="2" />
+        <text x="146" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Brand Identity &amp; Artwork</text>
+
+        <!-- Card 2 -->
+        <rect y="104" width="292" height="96" rx="8" fill="#1A2336" stroke="#28354F" stroke-width="1" />
+        <rect x="12" y="116" width="268" height="72" rx="6" fill="#1F2A3E" />
+        <text x="146" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">High-Fidelity Showcase Grid</text>
+      </g>
+
+      <!-- Floating Pill Button (Simulating PillButtons.tsx) -->
+      <g transform="translate(120, 246)">
+        <rect width="244" height="34" rx="17" fill="#1A2130" stroke="#2C374D" stroke-width="1.5" />
+        <text x="54" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">THINK UX</text>
+        <rect x="110" y="3" width="131" height="28" rx="14" fill="#2E81FF" />
+        <text x="175" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Build With Us</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Think UX Architecture Diagram</title>
+  <desc id="desc">System architecture diagram showing data flow, layout engines, shared chrome components, and asset handling in Think UX.</desc>
+
+  <defs>
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090C15" />
+      <stop offset="100%" stop-color="#0E1322" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E81FF" />
+      <stop offset="100%" stop-color="#EC7F2E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" rx="16" fill="url(#arch-bg)" />
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="15.5" stroke="#1E2638" stroke-width="1" />
+
+  <!-- Section Header -->
+  <g transform="translate(48, 36)">
+    <circle cx="10" cy="10" r="4" fill="#EC7F2E" />
+    <text x="24" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E81FF" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+    <text x="0" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Separation of Concerns &amp; Component Hierarchy</text>
+  </g>
+
+  <!-- Flow Diagrams / Architecture Cards -->
+  <g transform="translate(48, 110)">
+    <!-- Card 1: Data Registry -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="180" rx="12" fill="#111625" stroke="#1D273B" stroke-width="1.5" />
+      <rect x="0" y="0" width="250" height="4" rx="2" fill="#2E81FF" />
+      <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">1. Brand Data Registry</text>
+      <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#2E81FF">lib/brands.ts</text>
+      
+      <rect x="16" y="68" width="218" height="32" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="28" y="88" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#E2E8F0">MainPageBrand</text>
+      <text x="180" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94A3B8">Type</text>
+
+      <rect x="16" y="108" width="218" height="32" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="28" y="128" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#E2E8F0">CaseStudyBrand</text>
+      <text x="180" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94A3B8">Type</text>
+      
+      <text x="20" y="162" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Centralized copy &amp; tile data</text>
+    </g>
+
+    <!-- Connector Arrow 1 -> 2 -->
+    <path d="M 260 90 L 295 90" stroke="#2E81FF" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="295,86 303,90 295,94" fill="#2E81FF" />
+
+    <!-- Card 2: Shared Chrome Layout -->
+    <g transform="translate(310, 0)">
+      <rect width="260" height="180" rx="12" fill="#111625" stroke="#1D273B" stroke-width="1.5" />
+      <rect x="0" y="0" width="260" height="4" rx="2" fill="#38BDF8" />
+      <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">2. Persistent Chrome</text>
+      <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#38BDF8">app/layout.tsx</text>
+
+      <rect x="16" y="66" width="228" height="28" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="28" y="84" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#93C5FD">&lt;PillButtons /&gt;</text>
+      <text x="175" y="84" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Fixed CTA</text>
+
+      <rect x="16" y="100" width="228" height="28" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="28" y="118" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#93C5FD">&lt;ClientCarousel /&gt;</text>
+      <text x="170" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Marquee</text>
+
+      <rect x="16" y="134" width="228" height="28" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="28" y="152" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#93C5FD">&lt;ThinkUxLogo /&gt;</text>
+      <text x="170" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Identity</text>
+    </g>
+
+    <!-- Connector Arrow 2 -> 3 -->
+    <path d="M 580 90 L 615 90" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="615,86 623,90 615,94" fill="#38BDF8" />
+
+    <!-- Card 3: Layout Engines -->
+    <g transform="translate(630, 0)">
+      <rect width="250" height="180" rx="12" fill="#111625" stroke="#1D273B" stroke-width="1.5" />
+      <rect x="0" y="0" width="250" height="4" rx="2" fill="#C084FC" />
+      <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">3. Page Layout Engines</text>
+      <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#C084FC">components/*.tsx</text>
+
+      <rect x="16" y="68" width="218" height="32" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="26" y="88" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#E2E8F0">MainPageLayout</text>
+      <text x="145" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#A78BFA">Sticky Split</text>
+
+      <rect x="16" y="108" width="218" height="32" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="26" y="128" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#E2E8F0">CaseStudyLayout</text>
+      <text x="145" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#A78BFA">Grid Tiles</text>
+
+      <text x="20" y="162" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Responsive sticky mechanics</text>
+    </g>
+
+    <!-- Connector Arrow 3 -> 4 -->
+    <path d="M 890 90 L 925 90" stroke="#C084FC" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="925,86 933,90 925,94" fill="#C084FC" />
+
+    <!-- Card 4: External Media Assets -->
+    <g transform="translate(940, 0)">
+      <rect width="212" height="180" rx="12" fill="#111625" stroke="#1D273B" stroke-width="1.5" />
+      <rect x="0" y="0" width="212" height="4" rx="2" fill="#EC7F2E" />
+      <text x="18" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">4. Asset Layer</text>
+      <text x="18" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#EC7F2E">lib/assetPath.ts</text>
+
+      <rect x="14" y="68" width="184" height="40" rx="6" fill="#182033" stroke="#25324D" stroke-width="1" />
+      <text x="24" y="86" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" fill="#FDBA74">public/assets/</text>
+      <text x="24" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94A3B8">Symlinked (~1.7 GB)</text>
+
+      <text x="18" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">Encodes spaces &amp;</text>
+      <text x="18" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">special chars safely</text>
+    </g>
+  </g>
+</svg>
