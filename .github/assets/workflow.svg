@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Developer Workflow Diagram</title>
+  <desc id="desc">Step-by-step developer workflow for adding a new brand showcase to Think UX portfolio platform.</desc>
+
+  <defs>
+    <linearGradient id="flow-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090C15" />
+      <stop offset="100%" stop-color="#0D111D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="280" rx="16" fill="url(#flow-bg)" />
+  <rect x="0.5" y="0.5" width="1199" height="279" rx="15.5" stroke="#1E2638" stroke-width="1" />
+
+  <!-- Section Header -->
+  <g transform="translate(48, 32)">
+    <circle cx="10" cy="10" r="4" fill="#EC7F2E" />
+    <text x="24" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E81FF" letter-spacing="1">DEVELOPER WORKFLOW</text>
+    <text x="0" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">How to Onboard a New Brand Showcase</text>
+  </g>
+
+  <!-- 4 Step Pipeline -->
+  <g transform="translate(48, 100)">
+    <!-- Step 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="140" rx="10" fill="#121726" stroke="#1F2A3E" stroke-width="1.5" />
+      <circle cx="32" cy="30" r="14" fill="#2E81FF" />
+      <text x="32" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+      
+      <text x="58" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Link Assets</text>
+      
+      <rect x="14" y="56" width="222" height="40" rx="6" fill="#0A0E18" stroke="#1A2234" stroke-width="1" />
+      <text x="22" y="74" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#94A3B8">cp -r &quot;/Volumes/.../&quot;</text>
+      <text x="22" y="88" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#38BDF8">public/assets/&lt;Brand&gt;</text>
+
+      <text x="14" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Place heavy assets in folder</text>
+    </g>
+
+    <!-- Connector 1->2 -->
+    <path d="M 260 70 L 285 70" stroke="#2E81FF" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="285,66 293,70 285,74" fill="#2E81FF" />
+
+    <!-- Step 2 -->
+    <g transform="translate(300, 0)">
+      <rect width="250" height="140" rx="10" fill="#121726" stroke="#1F2A3E" stroke-width="1.5" />
+      <circle cx="32" cy="30" r="14" fill="#38BDF8" />
+      <text x="32" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+
+      <text x="58" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Register Data</text>
+
+      <rect x="14" y="56" width="222" height="40" rx="6" fill="#0A0E18" stroke="#1A2234" stroke-width="1" />
+      <text x="22" y="74" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#94A3B8">lib/brands.ts</text>
+      <text x="22" y="88" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#E2E8F0">&lt;brand&gt;Main / CaseStudy</text>
+
+      <text x="14" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Define sections &amp; image tiles</text>
+    </g>
+
+    <!-- Connector 2->3 -->
+    <path d="M 560 70 L 585 70" stroke="#38BDF8" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="585,66 593,70 585,74" fill="#38BDF8" />
+
+    <!-- Step 3 -->
+    <g transform="translate(600, 0)">
+      <rect width="250" height="140" rx="10" fill="#121726" stroke="#1F2A3E" stroke-width="1.5" />
+      <circle cx="32" cy="30" r="14" fill="#C084FC" />
+      <text x="32" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+
+      <text x="58" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Build Routes</text>
+
+      <rect x="14" y="56" width="222" height="40" rx="6" fill="#0A0E18" stroke="#1A2234" stroke-width="1" />
+      <text x="22" y="74" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#C084FC">app/&lt;brand&gt;/page.tsx</text>
+      <text x="22" y="88" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#94A3B8">MainPageLayout / CaseStudy</text>
+
+      <text x="14" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Mount sticky layout containers</text>
+    </g>
+
+    <!-- Connector 3->4 -->
+    <path d="M 860 70 L 885 70" stroke="#C084FC" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="885,66 893,70 885,74" fill="#C084FC" />
+
+    <!-- Step 4 -->
+    <g transform="translate(900, 0)">
+      <rect width="204" height="140" rx="10" fill="#121726" stroke="#1F2A3E" stroke-width="1.5" />
+      <circle cx="32" cy="30" r="14" fill="#EC7F2E" />
+      <text x="32" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">4</text>
+
+      <text x="58" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Deploy</text>
+
+      <rect x="14" y="56" width="176" height="40" rx="6" fill="#0A0E18" stroke="#1A2234" stroke-width="1" />
+      <text x="22" y="74" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" fill="#4ADE80">npm run build</text>
+      <text x="22" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94A3B8">Vercel static export</text>
+
+      <text x="14" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">CDN static edge delivery</text>
+    </g>
+  </g>
+</svg>
