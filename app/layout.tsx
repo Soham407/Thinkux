@@ -32,6 +32,33 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.thinkux.co/#organization",
+  name: "Think UX",
+  alternateName: "Think Ux",
+  url: "https://www.thinkux.co/",
+  logo: { "@type": "ImageObject", url: "https://www.thinkux.co/logo.png" },
+  image: "https://www.thinkux.co/logo.png",
+  description:
+    "Think UX is a Brand & Business Consulting and Digital Marketing Agency in Pune offering SEO, Google Ads, Meta Ads, Branding, Website Development, Graphic Design, Photography, Videography and Business Growth Solutions.",
+  email: "info@thinkux.co",
+  telephone: "+91-2067812057",
+  foundingLocation: { "@type": "Place", name: "Pune, Maharashtra, India" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Pune",
+    addressRegion: "Maharashtra",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://www.instagram.com/think__ux/",
+    "https://www.facebook.com/thinkux1/",
+    "https://www.linkedin.com/company/think-ux-brand-business-consultancy/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +66,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${instrumentSans.variable} h-full`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
       <body
         className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]"
         suppressHydrationWarning
