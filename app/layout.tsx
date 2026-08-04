@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Instrument_Sans } from "next/font/google";
 import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
@@ -48,21 +49,38 @@ export default function RootLayout({
           <PillButtons />
           <footer id="site-footer" className="pb-10">
             <ClientCarousel />
-            <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 font-body">
-              <div className="text-[color:var(--foreground)]/60 text-[15px] leading-relaxed">
-                You{"\u2019"}ve reached the end.<br />
-                Now let{"\u2019"}s build what{"\u2019"}s NEXT.
+            <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 grid gap-10 md:grid-cols-[auto_minmax(0,1.2fr)_auto_auto_auto] md:gap-12 font-body text-[15px] leading-7 text-[#2d2e83]">
+              <Image src="/logo.png" alt="Think UX" width={108} height={120} className="h-auto w-[110px] self-start" />
+              <div>
+                <p className="font-medium whitespace-nowrap">FIND US Here :</p>
+                <p className="font-semibold max-w-[22rem]">
+                  202, Suvidha Hariprasad, Opp. Jog High School, Mayur Colony, Kothrud, Pune - 411038, Maharashtra, INDIA.
+                </p>
               </div>
-              <div className="flex flex-wrap items-center gap-6 md:gap-10 text-[15px] text-[color:var(--foreground)]">
-                <a href="/brand" className="hover:text-[color:var(--brand-blue)] transition">Brand</a>
-                <a href="/business" className="hover:text-[color:var(--brand-blue)] transition">Business</a>
-                <a href="/about" className="hover:text-[color:var(--brand-blue)] transition">About Us</a>
-                <a href="/contact" className="hover:text-[color:var(--brand-blue)] transition">Contact</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--brand-blue)] transition">LinkedIn</a>
-                <a href="https://www.instagram.com/think__ux/" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--brand-blue)] transition flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                  Instagram
-                </a>
+              <div>
+                <p className="font-medium whitespace-nowrap">TELL US What You{"\u2019"}re Building.</p>
+                <p className="font-semibold flex items-center gap-1.5">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+                  <a href="tel:+912067812057" className="hover:underline">+912067812057</a>
+                </p>
+              </div>
+              <div>
+                <p className="font-medium whitespace-nowrap">Your INBOX. Our INSPIRATION.</p>
+                <p className="font-semibold flex items-center gap-1.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+                  <a href="mailto:info@thinkux.co" className="hover:underline">info@thinkux.co</a>
+                </p>
+              </div>
+              <div>
+                <p className="font-medium whitespace-nowrap">Be a Part of OUR STORY</p>
+                <div className="mt-2 flex items-center gap-3">
+                  <a href="https://www.instagram.com/think__ux?igsh=MTQ4eHFta2NkdTIyeA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-70 transition">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" strokeLinecap="round"/></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/company/think-ux-brand-business-consultancy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:opacity-70 transition">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect width="24" height="24" rx="5"/><path fill="#fff" d="M7 9.5h2.4V18H7zM8.2 5.8a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8zM11 9.5h2.3v1.2h.03c.32-.6 1.1-1.24 2.27-1.24 2.43 0 2.88 1.5 2.88 3.5V18h-2.4v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.23V18H11z"/></svg>
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
