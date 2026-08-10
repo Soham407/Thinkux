@@ -7,6 +7,51 @@ import { assetPath } from "@/lib/assetPath";
 
 const FOLDER = "Hansgrohe";
 
+// Alt text + title for each image, keyed by filename.
+// Add/edit entries here if you add more images later.
+const IMAGE_META: Record<string, { alt: string; title: string }> = {
+  "Axor advt_HALFPAGE 1.avif": {
+    alt: "Axor Hansgrohe half-page advertising design by THINK UX, an advertising agency in Pune",
+    title: "Axor Hansgrohe Half-Page Advertisement",
+  },
+  "Axor_Branding_CC 1.avif": {
+    alt: "Axor Hansgrohe branding and creative design by THINK UX, a branding agency in Pune",
+    title: "Axor Hansgrohe Branding Design",
+  },
+  "ADVERTORIAL 2.avif": {
+    alt: "Hansgrohe advertorial creative design by THINK UX, a creative agency in Pune",
+    title: "Hansgrohe Advertorial Design",
+  },
+  "PowderRain leaflet A5 back 1.avif": {
+    alt: "Hansgrohe PowderRain A5 leaflet design by THINK UX, a graphic design agency in Pune",
+    title: "Hansgrohe PowderRain A5 Leaflet",
+  },
+  "ADVERTORIAL 1 1.avif": {
+    alt: "Hansgrohe advertising and marketing creative by THINK UX, a marketing agency in Pune",
+    title: "Hansgrohe Advertising Creative",
+  },
+  "hansgrohe Overhead shower_Man 2.avif": {
+    alt: "Hansgrohe overhead shower advertising creative designed by THINK UX, a creative agency in Pune",
+    title: "Hansgrohe Overhead Shower Campaign",
+  },
+  "hansgrohe Hand shower_Baby girl 2.avif": {
+    alt: "Hansgrohe hand shower advertising campaign by THINK UX, a branding and marketing agency in Pune",
+    title: "Hansgrohe Hand Shower Campaign",
+  },
+  "hansgrohe Overhead shower_Lady - 3.6ft x 8ft 2.avif": {
+    alt: "Hansgrohe overhead shower promotional design by THINK UX, an advertising agency in Pune",
+    title: "Hansgrohe Overhead Shower Promotional Design",
+  },
+  "PowderRain  leaflet A5 front 1.avif": {
+    alt: "Hansgrohe PowderRain A5 leaflet and product marketing design by THINK UX, a graphic design agency in Pune",
+    title: "Hansgrohe PowderRain A5 Leaflet Front",
+  },
+  "PowderRain  leaflet A5 front_option 1 1.avif": {
+    alt: "Hansgrohe PowderRain promotional leaflet design by THINK UX, a creative marketing agency in Pune",
+    title: "Hansgrohe PowderRain Promotional Leaflet",
+  },
+};
+
 function ImageTile({
   file,
   index,
@@ -22,6 +67,10 @@ function ImageTile({
   cropClassName?: string;
   priority?: boolean;
 }) {
+  const meta = IMAGE_META[file];
+  const alt = meta?.alt ?? "Hansgrohe project image by THINK UX";
+  const title = meta?.title ?? "Hansgrohe";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +81,8 @@ function ImageTile({
     >
       <Image
         src={assetPath(FOLDER, file)}
-        alt=""
+        alt={alt}
+        title={title}
         width={1200}
         height={1600}
         className={`h-full w-full object-contain ${cropClassName}`.trim()}
@@ -48,7 +98,6 @@ export default function HansgroheCaseStudyPage() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
       <CaseStudyHeader name="Hansgrohe" />
-
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-[0.92fr_1.5fr] gap-4 md:gap-5 items-stretch">
           <ImageTile
@@ -66,7 +115,6 @@ export default function HansgroheCaseStudyPage() {
             priority
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
           <ImageTile
             file="ADVERTORIAL 2.avif"
@@ -86,7 +134,6 @@ export default function HansgroheCaseStudyPage() {
             className="aspect-[462/664] bg-white"
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-[0.82fr_0.9fr_0.9fr] gap-4 md:gap-5 items-start">
           <div className="flex flex-col gap-4 md:gap-5">
             <ImageTile
@@ -108,7 +155,6 @@ export default function HansgroheCaseStudyPage() {
               sizes="(min-width: 768px) 24vw, 100vw"
             />
           </div>
-
           <ImageTile
             file="PowderRain  leaflet A5 front 1.avif"
             index={8}
