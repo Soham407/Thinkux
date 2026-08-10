@@ -13,20 +13,20 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Think UX",
+  title: "Best Business Consultancy Agency in Pune | Think UX",
   description:
-    "Think UX is a design and branding agency crafting visual identities, campaigns, and digital experiences for brands across India.",
+    "Best Business Consultancy Agency in Pune, providing Business Strategy, Branding, UI/UX Design, Product Design, Website Design, UX Research & Digital Consulting.",
   openGraph: {
-    title: "Think UX",
+    title: "Best Business Consultancy Agency in Pune | Think UX",
     description:
-      "Design and branding agency crafting visual identities, campaigns, and digital experiences.",
+      "Best Business Consultancy Agency in Pune, providing Business Strategy, Branding, UI/UX Design, Product Design, Website Design, UX Research & Digital Consulting.",
     images: [{ url: "/og-image.png", width: 108, height: 120 }],
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Think UX",
-    description: "Design and branding agency — visual identities, campaigns, digital experiences.",
+    title: "Best Business Consultancy Agency in Pune | Think UX",
+    description: "Best Business Consultancy Agency in Pune, providing Business Strategy, Branding, UI/UX Design, Product Design, Website Design, UX Research & Digital Consulting.",
     images: ["/og-image.png"],
   },
 };
