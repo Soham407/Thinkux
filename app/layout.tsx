@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 import { Instrument_Sans } from "next/font/google";
 import "@fontsource-variable/tasa-orbiter";
 import "./globals.css";
@@ -12,6 +13,8 @@ const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
+
+const GA_MEASUREMENT_ID = "G-K2XYSSDHSY";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thinkux.co"),
@@ -75,6 +78,19 @@ export default function RootLayout({
           }}
         />
       </head>
+      {/* Google Analytics (gtag.js) — GA4 enhanced measurement covers App Router
+          soft navigations, so no manual pageview push is needed.
+          ponytail: plain next/script, not @next/third-parties (still experimental). */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+      </Script>
       <body
         className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]"
         suppressHydrationWarning
