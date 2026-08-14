@@ -173,8 +173,3 @@ export default function KalikaSteelCaseStudy() {
     </section>
   );
 }
-        <YouTubeEmbed id="qmNJUM0CG-g" index={10} />
-      </div>
-    </section>
-  );
-}
