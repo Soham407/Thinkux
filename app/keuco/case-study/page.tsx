@@ -1,12 +1,49 @@
 "use client";
-
+ 
 import Image from "next/image";
 import { m as motion } from "framer-motion";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { assetPath } from "@/lib/assetPath";
-
+ 
 const FOLDER = "KEUCO";
-
+ 
+// Alt text + title for each image, keyed by filename.
+// Add/edit entries here if you add more images later.
+const IMAGE_META: Record<string, { alt: string; title: string }> = {
+  "Advt 3 1.avif": {
+    alt: "KEUCO advertising creative designed by THINK UX, an advertising agency in Pune",
+    title: "KEUCO Advertising Creative",
+  },
+  "Advt 4 1.avif": {
+    alt: "KEUCO promotional advertisement design by THINK UX, a creative agency in Pune",
+    title: "KEUCO Promotional Advertisement",
+  },
+  "Advt 5 1.avif": {
+    alt: "KEUCO brand advertising and visual design by THINK UX, a branding agency in Pune",
+    title: "KEUCO Brand Advertising",
+  },
+  "2 3.avif": {
+    alt: "KEUCO product marketing and creative design by THINK UX, a marketing agency in Pune",
+    title: "KEUCO Product Marketing Design",
+  },
+  "Asset 1@2x 6.avif": {
+    alt: "KEUCO product branding and creative communication by THINK UX, a brand design agency in Pune",
+    title: "KEUCO Product Branding",
+  },
+  "Asset 3@2x 6.avif": {
+    alt: "KEUCO visual communication and advertising design by THINK UX, a graphic design agency in Pune",
+    title: "KEUCO Visual Communication",
+  },
+  "Group.avif": {
+    alt: "KEUCO branding and marketing communication by THINK UX, a branding and marketing agency in Pune",
+    title: "KEUCO Brand Communication",
+  },
+  "Asset 2@2x 6.avif": {
+    alt: "KEUCO creative marketing design by THINK UX, a digital marketing agency in Pune",
+    title: "KEUCO Creative Marketing Design",
+  },
+};
+ 
 function ImageTile({
   file,
   index,
@@ -22,6 +59,10 @@ function ImageTile({
   cropClassName?: string;
   priority?: boolean;
 }) {
+  const meta = IMAGE_META[file];
+  const alt = meta?.alt ?? "KEUCO project image by THINK UX";
+  const title = meta?.title ?? "KEUCO";
+ 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +73,8 @@ function ImageTile({
     >
       <Image
         src={assetPath(FOLDER, file)}
-        alt=""
+        alt={alt}
+        title={title}
         width={1200}
         height={1600}
         className={`h-full w-full object-contain ${cropClassName}`.trim()}
@@ -44,12 +86,11 @@ function ImageTile({
     </motion.div>
   );
 }
-
+ 
 export default function KeucoCaseStudyPage() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 pt-10 pb-16">
       <CaseStudyHeader name="KEUCO" />
-
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           <ImageTile
@@ -71,7 +112,6 @@ export default function KeucoCaseStudyPage() {
             priority
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-[1.78fr_0.9fr_0.9fr] gap-4 md:gap-5 items-start">
           <ImageTile
             file="2 3.avif"
@@ -89,7 +129,6 @@ export default function KeucoCaseStudyPage() {
             className="aspect-[454/606] bg-[#0d0718]"
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 md:gap-5">
           <ImageTile
             file="Group.avif"
