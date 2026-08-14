@@ -14,6 +14,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.thinkux.co"),
   title: "Best Brand and Business Consultancy Agency in Pune | Think UX",
   description:
     "Best Brand and Business Consultancy Agency in Pune, providing Business Strategy, Branding, UI/UX Design, Product Design, Website Design, UX Research & Digital Consulting.",
